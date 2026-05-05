@@ -1,10 +1,14 @@
 import React from "react";
 import CardCourse from "./CardCourse";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigation } from "react-router-dom";
+import { CardSkeleton } from "../../../components/LoadingSkeleton";
+import EmptyState from "../../../components/EmptyState";
 
 export default function StudentPage() {
   const data = useLoaderData();
-  console.log(data);
+  const navigation = useNavigation();
+  const isLoading = navigation.state === 'loading';
+
   return (
     <section
       id="LatestCourse"
@@ -13,15 +17,30 @@ export default function StudentPage() {
       <h2 className="font-extrabold text-lg md:text-[22px] leading-[27px] md:leading-[33px]">
         Latest Courses
       </h2>
-      {data?.map((item) => (
-        <CardCourse
-          key={item._id}
-          imageUrl={item.thumbnail_url}
-          title={item.name}
-          id={item._id}
-          category={item.category?.name}
+      
+      {isLoading ? (
+        <>
+          <CardSkeleton />
+          <CardSkeleton />
+          <CardSkeleton />
+        </>
+      ) : !data || data.length === 0 ? (
+        <EmptyState 
+          title="No Courses Available"
+          description="There are no courses available at the moment. Check back later for new learning opportunities!"
+          icon="note-favorite"
         />
-      ))}
+      ) : (
+        data.map((item) => (
+          <CardCourse
+            key={item._id}
+            imageUrl={item.thumbnail_url}
+            title={item.name}
+            id={item._id}
+            category={item.category?.name}
+          />
+        ))
+      )}
     </section>
   );
 }

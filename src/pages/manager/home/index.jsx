@@ -1,12 +1,14 @@
 import React from "react";
 import Courses from "./courses";
 import Students from "./students";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigation } from "react-router-dom";
+import { StatCardSkeleton } from "../../../components/LoadingSkeleton";
 
 export default function ManagerHomePage() {
     const overview = useLoaderData()
+    const navigation = useNavigation()
+    const isLoading = navigation.state === 'loading'
 
-    console.log(overview)
   return (
     <>
       <header className="flex flex-col md:flex-row items-start md:items-center justify-between gap-[15px] md:gap-[30px]">
@@ -21,13 +23,13 @@ export default function ManagerHomePage() {
         <div className="flex flex-wrap items-center gap-2 md:gap-3 w-full md:w-auto">
           <a
             href="#"
-            className="flex-1 md:flex-none rounded-full border border-[#060A23] p-[12px_16px] md:p-[14px_20px] font-semibold text-sm md:text-base text-center md:text-nowrap"
+            className="flex-1 md:flex-none rounded-full border border-[#060A23] p-[12px_16px] md:p-[14px_20px] font-semibold text-sm md:text-base text-center md:text-nowrap hover:bg-[#F8FAFB] transition-all duration-300"
           >
             Customize
           </a>
           <a
-            href=""
-            className="flex-1 md:flex-none rounded-full p-[12px_16px] md:p-[14px_20px] font-semibold text-sm md:text-base text-[#FFFFFF] bg-[#662FFF] text-center md:text-nowrap"
+            href="#"
+            className="flex-1 md:flex-none rounded-full p-[12px_16px] md:p-[14px_20px] font-semibold text-sm md:text-base text-[#FFFFFF] bg-[#662FFF] text-center md:text-nowrap hover:bg-[#5528CC] transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             Export Data
           </a>
@@ -38,66 +40,77 @@ export default function ManagerHomePage() {
         className="flex flex-col lg:flex-row rounded-[30px] p-[20px] md:p-[30px] gap-[20px] md:gap-[30px] bg-[#F8FAFB]"
       >
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:w-[500px] gap-[15px] md:gap-[30px]">
-          <div className="flex flex-col rounded-[20px] p-4 md:p-5 gap-5 bg-white shadow-[0_4px_4px_0_#E0E2EF]">
-            <img
-              src="/assets/images/icons/profile-2user-purple.svg"
-              className="w-[40px] h-[40px] md:w-[46px] md:h-[46px]"
-              alt="icon"
-            />
-            <div>
-              <p className="font-extrabold text-xl md:text-2xl leading-[30px] md:leading-[36px]">
-                {overview?.totalStudent}
-              </p>
-              <p className="text-[#838C9D] text-sm md:text-base">
-                Total Students
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col rounded-[20px] p-4 md:p-5 gap-5 bg-white shadow-[0_4px_4px_0_#E0E2EF]">
-            <img
-              src="/assets/images/icons/note-favorite-purple.svg"
-              className="w-[40px] h-[40px] md:w-[46px] md:h-[46px]"
-              alt="icon"
-            />
-            <div>
-              <p className="font-extrabold text-xl md:text-2xl leading-[30px] md:leading-[36px]">
-                {overview?.totalCourse}
-              </p>
-              <p className="text-[#838C9D] text-sm md:text-base">
-                Total Courses
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col rounded-[20px] p-4 md:p-5 gap-5 bg-white shadow-[0_4px_4px_0_#E0E2EF]">
-            <img
-              src="/assets/images/icons/video-play-purple.svg"
-              className="w-[40px] h-[40px] md:w-[46px] md:h-[46px]"
-              alt="icon"
-            />
-            <div>
-              <p className="font-extrabold text-xl md:text-2xl leading-[30px] md:leading-[36px]">
-                {overview?.totalVideo}
-              </p>
-              <p className="text-[#838C9D] text-sm md:text-base">
-                Video Content
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col rounded-[20px] p-4 md:p-5 gap-5 bg-white shadow-[0_4px_4px_0_#E0E2EF]">
-            <img
-              src="/assets/images/icons/note-purple.svg"
-              className="w-[40px] h-[40px] md:w-[46px] md:h-[46px]"
-              alt="icon"
-            />
-            <div>
-              <p className="font-extrabold text-xl md:text-2xl leading-[30px] md:leading-[36px]">
-                {overview?.totalTexts}
-              </p>
-              <p className="text-[#838C9D] text-sm md:text-base">
-                Text Content
-              </p>
-            </div>
-          </div>
+          {isLoading ? (
+            <>
+              <StatCardSkeleton />
+              <StatCardSkeleton />
+              <StatCardSkeleton />
+              <StatCardSkeleton />
+            </>
+          ) : (
+            <>
+              <div className="flex flex-col rounded-[20px] p-4 md:p-5 gap-5 bg-white shadow-[0_4px_4px_0_#E0E2EF] hover:shadow-lg transition-shadow duration-300">
+                <img
+                  src="/assets/images/icons/profile-2user-purple.svg"
+                  className="w-[40px] h-[40px] md:w-[46px] md:h-[46px]"
+                  alt="icon"
+                />
+                <div>
+                  <p className="font-extrabold text-xl md:text-2xl leading-[30px] md:leading-[36px]">
+                    {overview?.totalStudent || 0}
+                  </p>
+                  <p className="text-[#838C9D] text-sm md:text-base">
+                    Total Students
+                  </p>
+                </div>
+              </div>
+              <div className="flex flex-col rounded-[20px] p-4 md:p-5 gap-5 bg-white shadow-[0_4px_4px_0_#E0E2EF] hover:shadow-lg transition-shadow duration-300">
+                <img
+                  src="/assets/images/icons/note-favorite-purple.svg"
+                  className="w-[40px] h-[40px] md:w-[46px] md:h-[46px]"
+                  alt="icon"
+                />
+                <div>
+                  <p className="font-extrabold text-xl md:text-2xl leading-[30px] md:leading-[36px]">
+                    {overview?.totalCourse || 0}
+                  </p>
+                  <p className="text-[#838C9D] text-sm md:text-base">
+                    Total Courses
+                  </p>
+                </div>
+              </div>
+              <div className="flex flex-col rounded-[20px] p-4 md:p-5 gap-5 bg-white shadow-[0_4px_4px_0_#E0E2EF] hover:shadow-lg transition-shadow duration-300">
+                <img
+                  src="/assets/images/icons/video-play-purple.svg"
+                  className="w-[40px] h-[40px] md:w-[46px] md:h-[46px]"
+                  alt="icon"
+                />
+                <div>
+                  <p className="font-extrabold text-xl md:text-2xl leading-[30px] md:leading-[36px]">
+                    {overview?.totalVideo || 0}
+                  </p>
+                  <p className="text-[#838C9D] text-sm md:text-base">
+                    Video Content
+                  </p>
+                </div>
+              </div>
+              <div className="flex flex-col rounded-[20px] p-4 md:p-5 gap-5 bg-white shadow-[0_4px_4px_0_#E0E2EF] hover:shadow-lg transition-shadow duration-300">
+                <img
+                  src="/assets/images/icons/note-purple.svg"
+                  className="w-[40px] h-[40px] md:w-[46px] md:h-[46px]"
+                  alt="icon"
+                />
+                <div>
+                  <p className="font-extrabold text-xl md:text-2xl leading-[30px] md:leading-[36px]">
+                    {overview?.totalTexts || 0}
+                  </p>
+                  <p className="text-[#838C9D] text-sm md:text-base">
+                    Text Content
+                  </p>
+                </div>
+              </div>
+            </>
+          )}
         </div>
         <div className="flex flex-col flex-1 rounded-[20px] p-4 md:p-5 gap-5 bg-white shadow-[0_4px_4px_0_#E0E2EF]">
           <div className="relative flex items-center justify-center shrink-0 m-auto rounded-full w-[180px] h-[180px] md:w-[230px] md:h-[230px]">

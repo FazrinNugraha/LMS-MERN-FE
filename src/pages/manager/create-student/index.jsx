@@ -6,14 +6,13 @@ import { useState, useRef } from "react";
 import { useMutation } from "@tanstack/react-query";
 import { createStudent } from "../../../services/studentsService";
 import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
 import { updateStudent } from "../../../services/studentsService";
 import { updateStudentSchema } from "../../../utils/zodSchema";
 import { useParams } from "react-router-dom";
+import toast from "react-hot-toast";
 
 export default function ManageCreateStudentPage() {
   const student = useLoaderData()
-  console.log("student", student)
 
   const {
     register,
@@ -31,6 +30,8 @@ export default function ManageCreateStudentPage() {
   const navigate = useNavigate();
 
   const onSubmit = async (values) => {
+    const loadingToast = toast.loading(student === undefined ? "Creating student..." : "Updating student...");
+
     try {
       const formData = new FormData();
       formData.append("name", values.name);
@@ -40,14 +41,16 @@ export default function ManageCreateStudentPage() {
 
      if (student === undefined) {
       await mutateCreate.mutateAsync(formData);
+      toast.success("Student created successfully! 🎉", { id: loadingToast });
      } else {
       await mutateUpdate.mutateAsync(formData);
+      toast.success("Student updated successfully! ✨", { id: loadingToast });
      }
 
       navigate("/manager/students");
-      toast.success("Student created successfully");
     } catch (error) {
       console.log(error);
+      toast.error(error?.response?.data?.message || "Failed to save student. Please try again.", { id: loadingToast });
     }
   };
 
@@ -216,10 +219,10 @@ export default function ManageCreateStudentPage() {
           </button>
           <button
             type="submit"
-            disabled={student === undefined ? mutateCreate.isLoading : mutateUpdate.isLoading}
-            className="w-full rounded-full p-[14px_20px] font-semibold text-[#FFFFFF] bg-[#662FFF] text-nowrap"
+            disabled={student === undefined ? mutateCreate.isPending : mutateUpdate.isPending}
+            className="w-full rounded-full p-[14px_20px] font-semibold text-[#FFFFFF] bg-[#662FFF] text-nowrap hover:bg-[#5528CC] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
           >
-            {student === undefined ? "Add Now" : "Update Now"}
+            {student === undefined ? (mutateCreate.isPending ? "Adding..." : "Add Now") : (mutateUpdate.isPending ? "Updating..." : "Update Now")}
           </button>
         </div>
       </form>

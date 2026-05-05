@@ -1,10 +1,12 @@
 import CardCourses from './card'
-import { Link, useLoaderData } from 'react-router-dom'
+import { Link, useLoaderData, useNavigation } from 'react-router-dom'
+import { CardSkeleton } from '../../../components/LoadingSkeleton'
+import EmptyState from '../../../components/EmptyState'
 
 export default function ManageCoursePage() {
   const { data: courses = [] } = useLoaderData()
-
-  console.log('courses data in component:', courses)
+  const navigation = useNavigation()
+  const isLoading = navigation.state === 'loading'
 
   return (
     <>
@@ -21,14 +23,14 @@ export default function ManageCoursePage() {
         <div className="flex flex-wrap items-center gap-2 md:gap-3 w-full md:w-auto">
           <Link
             to="#"
-            className="flex-1 md:flex-none rounded-full border border-[#060A23] p-[12px_16px] md:p-[14px_20px] font-semibold text-sm md:text-base text-center md:text-nowrap"
+            className="flex-1 md:flex-none rounded-full border border-[#060A23] p-[12px_16px] md:p-[14px_20px] font-semibold text-sm md:text-base text-center md:text-nowrap hover:bg-[#F8FAFB] transition-all duration-300"
           >
             Import File
           </Link>
 
           <Link
             to="/manager/courses/create"
-            className="flex-1 md:flex-none rounded-full p-[12px_16px] md:p-[14px_20px] font-semibold text-sm md:text-base text-[#FFFFFF] bg-[#662FFF] text-center md:text-nowrap"
+            className="flex-1 md:flex-none rounded-full p-[12px_16px] md:p-[14px_20px] font-semibold text-sm md:text-base text-[#FFFFFF] bg-[#662FFF] text-center md:text-nowrap hover:bg-[#5528CC] transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             New Course
           </Link>
@@ -39,10 +41,20 @@ export default function ManageCoursePage() {
         id="CourseList"
         className="flex flex-col w-full rounded-[30px] p-[20px] md:p-[30px] gap-[15px] md:gap-[30px] bg-[#F8FAFB]"
       >
-        {courses.length === 0 ? (
-          <p className="text-center text-gray-500">
-            No courses available
-          </p>
+        {isLoading ? (
+          <>
+            <CardSkeleton />
+            <CardSkeleton />
+            <CardSkeleton />
+          </>
+        ) : courses.length === 0 ? (
+          <EmptyState 
+            title="No Courses Yet"
+            description="Start building your learning platform by creating your first course. Share knowledge and empower your team!"
+            actionText="Create First Course"
+            actionLink="/manager/courses/create"
+            icon="note-favorite"
+          />
         ) : (
           courses.map((item) => (
             <CardCourses
@@ -53,7 +65,6 @@ export default function ManageCoursePage() {
               imageUrl={item.thumbnailUrl}
               totalStudents={item.totalStudents}
             />
-
           ))
         )}
       </section>

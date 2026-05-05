@@ -24,6 +24,8 @@ import { getOverviews } from "../services/overviewService";
 import { ROLE_STUDENT, STORAGE_KEY } from "../utils/const";
 import { getMe } from "../services/authService";
 import { getCoursesStudent } from "../services/studentsService";
+import ManageCategoriesPage from "../pages/manager/categories";
+import LandingPage from "../pages/LandingPage";
 
 
 
@@ -32,7 +34,7 @@ import { getCoursesStudent } from "../services/studentsService";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <ManagerHomePage />
+    element: <LandingPage />
   },
   {
     path: "/manager/sign-in",
@@ -193,6 +195,10 @@ const router = createBrowserRouter([
           return students?.data
         },
         element: <StudentForm />
+      },
+      {
+        path: '/manager/categories',
+        element: <ManageCategoriesPage />
       }
     ]
   },
