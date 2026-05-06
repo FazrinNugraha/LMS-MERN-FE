@@ -16,7 +16,7 @@ export default function LayoutDashboard({isAdmin = true}) {
     {isManagerPreviewPage !== null  || isStudentPreviewPage !==null ? (
       <Outlet/>
     ): (
-      <div className="flex min-h-screen">
+      <div className="flex min-h-screen bg-[#F8FAFB]">
         <div className="hidden lg:block">
           <Sidebar isAdmin={isAdmin}/>
         </div>

@@ -34,9 +34,14 @@ export default function SignUpPage() {
         <nav className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between p-[20px] md:p-[30px] gap-[20px] md:gap-0">
           <Logo variant="dark" />
           <div className="flex flex-wrap items-center gap-2 md:gap-3 w-full md:w-auto">
+            <Link to="/">
+              <div className="flex-1 md:flex-none flex items-center justify-center gap-3 w-full md:w-fit rounded-full border-2 border-[#662FFF] p-[12px_20px] md:p-[14px_24px] transition-all duration-300 hover:bg-[#662FFF] hover:shadow-lg bg-white group">
+                <span className="font-semibold text-[#662FFF] group-hover:text-white transition-colors text-sm md:text-base">Home</span>
+              </div>
+            </Link>
             <Link to="/manager/sign-in">
-              <div className="flex-1 md:flex-none flex items-center justify-center gap-3 w-full md:w-fit rounded-full border-2 border-[#662FFF] p-[12px_20px] md:p-[14px_24px] transition-all duration-300 hover:bg-[#662FFF] hover:shadow-lg bg-white">
-                <span className="font-semibold text-[#662FFF] hover:text-white transition-colors text-sm md:text-base">Sign In</span>
+              <div className="flex-1 md:flex-none flex items-center justify-center gap-3 w-full md:w-fit rounded-full border-2 border-[#662FFF] p-[12px_20px] md:p-[14px_24px] transition-all duration-300 hover:bg-[#662FFF] hover:shadow-lg bg-white group">
+                <span className="font-semibold text-[#662FFF] group-hover:text-white transition-colors text-sm md:text-base">Sign In</span>
               </div>
             </Link>
           </div>
