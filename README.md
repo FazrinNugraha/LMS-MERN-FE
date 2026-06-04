@@ -10,7 +10,7 @@ Proyek ini merupakan bagian Frontend dari ekosistem LMS yang dibangun menggunaka
 * Sistem Multi-Role: Pemisahan rute, tata letak, dan komponen dasbor khusus untuk peran Manager dan Student.
 * Manajemen Kursus & Konten: Pembuatan, pembaruan, penghapusan, dan pratinjau kursus beserta materi di dalamnya (mendukung format konten berbasis video maupun teks melalui integrasi Rich Text Editor).
 * Manajemen Siswa & Kategori: Penanganan pendaftaran siswa ke dalam kursus tertentu serta pengelompokan kursus berdasarkan kategori secara dinamis.
-* Autentikasi & Proteksi Rute: Verifikasi token sesi pengguna secara berkala menggunakan pemanfaatan React Router Loaders dan penyimpanan token terenkripsi via react-secure-storage untuk mencegah akses tidak sah[cite: 1].
+* Autentikasi & Proteksi Rute: Verifikasi token sesi pengguna secara berkala menggunakan pemanfaatan React Router Loaders dan penyimpanan token terenkripsi via react-secure-storage untuk mencegah akses tidak sah.
 * Manajemen State & Sinkronisasi Cache: Optimalisasi pengambilan data asinkronus dan manajemen state server otomatis menggunakan TanStack React Query v5.
 
 ---
@@ -23,28 +23,29 @@ Proyek ini merupakan bagian Frontend dari ekosistem LMS yang dibangun menggunaka
 
 ## Struktur Arsitektur Rute
 
-Aplikasi menggunakan skema pembuatan rute terpusat melalui createBrowserRouter dengan penanganan hak akses sebagai berikut[cite: 1]:
+Aplikasi menggunakan skema pembuatan rute terpusat melalui `createBrowserRouter` dengan penanganan hak akses sebagai berikut:
 
-├── /                        -> Landing Page Utama[cite: 1]
-├── /success-checkout        -> Halaman Sukses Transaksi/Checkout Kursus[cite: 1]
+```text
+├── /                        -> Landing Page Utama
+├── /success-checkout        -> Halaman Sukses Transaksi/Checkout Kursus
 │
-├── /manager (Akses Khusus Peran: Manager)[cite: 1]
-│   ├── /sign-in             -> Login Akun Manager (Otomatis redirect jika sesi masih aktif)[cite: 1]
-│   ├── /sign-up             -> Registrasi Akun Baru Manager[cite: 1]
-│   ├── /                    -> Dasbor Utama / Ikhtisar Statistik Platform[cite: 1]
-│   ├── /courses             -> Manajemen Daftar Kursus[cite: 1]
-│   │   ├── /create          -> Formulir Pembuatan Kursus Baru[cite: 1]
-│   │   ├── /edit/:id        -> Pembaruan Detail Informasi Kursus[cite: 1]
-│   │   ├── /:id             -> Detail Struktur Kursus & Daftar Materi Konten[cite: 1]
-│   │   ├── /:id/create      -> Penambahan Materi Baru (Video/Teks) ke Kursus[cite: 1]
-│   │   ├── /:id/edit/:cId   -> Pembaruan Materi Kursus Spesifik[cite: 1]
-│   │   └── /:id/preview     -> Pratinjau Tampilan Pembelajaran Kursus dari Perspektif Siswa[cite: 1]
-│   ├── /students            -> Manajemen Daftar Seluruh Siswa[cite: 1]
-│   │   ├── /create          -> Pendaftaran Akun Siswa Baru[cite: 1]
-│   │   └── /edit/:id        -> Pembaruan Data Profil Siswa[cite: 1]
-│   └── /categories          -> Manajemen Kategori Kursus[cite: 1]
+├── /manager (Akses Khusus Peran: Manager)
+│   ├── /sign-in             -> Login Akun Manager (Otomatis redirect jika sesi masih aktif)
+│   ├── /sign-up             -> Registrasi Akun Baru Manager
+│   ├── /                    -> Dasbor Utama / Ikhtisar Statistik Platform
+│   ├── /courses             -> Manajemen Daftar Kursus
+│   │   ├── /create          -> Formulir Pembuatan Kursus Baru
+│   │   ├── /edit/:id        -> Pembaruan Detail Informasi Kursus
+│   │   ├── /:id             -> Detail Struktur Kursus & Daftar Materi Konten
+│   │   ├── /:id/create      -> Penambahan Materi Baru (Video/Teks) ke Kursus
+│   │   ├── /:id/edit/:cId   -> Pembaruan Materi Kursus Spesifik
+│   │   └── /:id/preview     -> Pratinjau Tampilan Pembelajaran Kursus dari Perspektif Siswa
+│   ├── /students            -> Manajemen Daftar Seluruh Siswa
+│   │   ├── /create          -> Pendaftaran Akun Siswa Baru
+│   │   └── /edit/:id        -> Pembaruan Data Profil Siswa
+│   └── /categories          -> Manajemen Kategori Kursus
 │
-└── /student (Akses Khusus Peran: Student)[cite: 1]
-    ├── /sign-in             -> Login Akun Student[cite: 1]
-    ├── /                    -> Dasbor Pembelajaran Student (Daftar Kursus yang Diikuti)[cite: 1]
-    └── /detail-courses/:id  -> Halaman Akses Pembelajaran & Pemutaran Materi Kursus[cite: 1]
+└── /student (Akses Khusus Peran: Student)
+    ├── /sign-in             -> Login Akun Student
+    ├── /                    -> Dasbor Pembelajaran Student (Daftar Kursus yang Diikuti)
+    └── /detail-courses/:id  -> Halaman Akses Pembelajaran & Pemutaran Materi Kursus
