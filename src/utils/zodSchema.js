@@ -3,10 +3,15 @@ import z from 'zod'
 export const signUpSchema = z.object({
     name: z.string().min(5, "Name must be at least 5 characters"),
     email: z.string().email("Please enter a valid email"),
-    password: z.string().min(3, "Password must be at least 3 characters")
+    password: z.string().min(8, "Password must be at least 8 characters")
 })
 
-export const signInSchema = signUpSchema.omit({ name: true })
+// PENTING: login tidak memakai min 8 karakter, supaya user lama yang passwordnya
+// pendek tetap bisa masuk (aturan password hanya berlaku saat membuat/mengganti password).
+export const signInSchema = z.object({
+    email: z.string().email("Please enter a valid email"),
+    password: z.string().min(1, "Password is required")
+})
 
 export const createCourseSchema = z.object({
     name: z.string().min(5),
@@ -60,7 +65,7 @@ export const mutateContentSchema = z.object({
 export const createStudentSchema = z.object({
     name: z.string().min(5),
     email: z.string().email("Please enter a valid email"),
-    password: z.string().min(5, "Password must be at least 5 characters"),
+    password: z.string().min(8, "Password must be at least 8 characters"),
     photo: z.any().refine((file) => file?.name, { message: "Photo is required" })
 })
 

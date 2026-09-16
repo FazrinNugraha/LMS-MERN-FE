@@ -78,7 +78,7 @@ const router = createBrowserRouter([
       try {
         await getMe()
         return session
-      } catch (error) {
+      } catch {
         // Token expired/invalid — hapus session & redirect ke login
         secureLocalStorage.removeItem(STORAGE_KEY)
         throw redirect('/manager/sign-in')
@@ -173,7 +173,9 @@ const router = createBrowserRouter([
       {
         path: '/manager/students/edit/:id',
         loader: async ({ params }) => {
-          const student = await getStudentsByCourseId(params.id)
+          // Sebelumnya memakai getStudentsByCourseId → data yang didapat adalah COURSE,
+          // sehingga student._id undefined dan update bisa mengenai siswa yang salah.
+          const student = await getStudentById(params.id)
 
           return student?.data
         },
@@ -215,7 +217,7 @@ const router = createBrowserRouter([
       try {
         await getMe()
         return session
-      } catch (error) {
+      } catch {
         // Token expired/invalid — hapus session & redirect ke login
         secureLocalStorage.removeItem(STORAGE_KEY)
         throw redirect('/student/sign-in')

@@ -1,9 +1,8 @@
 import { zodResolver } from "@hookform/resolvers/zod";
-import React, { use, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useLoaderData } from "react-router-dom";
 import { createCourseSchema } from "../../../utils/zodSchema";
-import { set } from "zod";
 import { useMutation } from "@tanstack/react-query";
 import { createCourse } from "../../../services/getCourses";
 import { useNavigate } from "react-router-dom";

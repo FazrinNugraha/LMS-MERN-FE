@@ -8,7 +8,6 @@ import { createStudent } from "../../../services/studentsService";
 import { useNavigate } from "react-router-dom";
 import { updateStudent } from "../../../services/studentsService";
 import { updateStudentSchema } from "../../../utils/zodSchema";
-import { useParams } from "react-router-dom";
 import toast from "react-hot-toast";
 
 export default function ManageCreateStudentPage() {
@@ -36,8 +35,17 @@ export default function ManageCreateStudentPage() {
       const formData = new FormData();
       formData.append("name", values.name);
       formData.append("email", values.email);
-      formData.append("password", values.password);
-      formData.append("avatar", values.photo);
+
+      // Jangan pernah mengirim field yang tidak ada: FormData.append(..., undefined)
+      // akan mengirim string "undefined", dan itu sempat membuat password siswa
+      // ter-reset menjadi literal "undefined" saat mode edit.
+      if (values.password) {
+        formData.append("password", values.password);
+      }
+
+      if (values.photo instanceof File) {
+        formData.append("avatar", values.photo);
+      }
 
      if (student === undefined) {
       await mutateCreate.mutateAsync(formData);

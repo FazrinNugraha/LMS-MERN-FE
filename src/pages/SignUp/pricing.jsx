@@ -3,6 +3,7 @@ import Logo from '../../components/Logo'
 import { Link } from 'react-router-dom'
 import { useMutation } from '@tanstack/react-query'
 import { postSignUp } from '../../services/authService'
+import toast from 'react-hot-toast'
 import PropTypes from 'prop-types'
 
 export default function Pricing({data}) {
@@ -12,17 +13,27 @@ export default function Pricing({data}) {
     })
 
     const submitData = async () => {
-        try {
-            if(!data){
-                return
-            }
+        if (!data) {
+            return
+        }
 
+        const loadingToast = toast.loading("Menyiapkan pembayaran...")
+
+        try {
             const response = await mutateAsync()
+
+            toast.success("Akun berhasil dibuat, mengalihkan ke pembayaran...", { id: loadingToast })
 
             window.location.replace(response.data.midtrans_payment_url)
         } catch (error) {
-            console.log(error);
-            
+            // Sebelumnya error ditelan tanpa pesan → user hanya melihat "tidak terjadi apa-apa".
+            const message =
+                error?.response?.data?.details?.[0] ||
+                error?.response?.data?.message ||
+                "Gagal mendaftar. Silakan coba lagi."
+
+            toast.error(message, { id: loadingToast })
+            console.log(error)
         }
     }
 
@@ -45,39 +56,12 @@ export default function Pricing({data}) {
             <h1 className="font-extrabold text-[46px] leading-[69px] text-white">Best Pricing For Everyone<br/>Who Wants to Grow Business</h1>
             <p className="text-lg leading-[27px] text-white">We delivery robust features to anyone unconditionally.</p>
         </header>
-        <div className="grid grid-cols-2 gap-[30px] max-w-[840px] mx-auto mt-[60px]">
-            <div className="card flex flex-col h-fit rounded-[20px] border border-[#262A56] p-[30px] gap-[30px] bg-[#080A2A]">
+        <div className="flex justify-center max-w-[440px] mx-auto mt-[60px]">
+            <div className="card flex flex-col h-fit w-full rounded-[20px] border border-[#262A56] p-[30px] gap-[30px] bg-[#080A2A]">
                 <img src="/assets/images/icons/note-favorite-white.svg" className="w-[60px] h-[60px]" alt="icon"/>
                 <div>
-                    <p className="font-extrabold text-[46px] leading-[69px] text-white">Rp 80.000</p>
-                    <p className="text-[#6B6C7F] mt-[6px]">Billed every single month</p>
-                </div>
-                <hr className="border-[#262A56]"/>
-                <div className="flex flex-col gap-5">
-                    <div className="flex items-center gap-[6px]">
-                        <img src="/assets/images/icons/tick-circle-white.svg" className="flex shrink-0 w-6 h-6" alt="icon"/>
-                        <p className="font-semibold text-white">Access gigantic features company</p>
-                    </div>
-                    <div className="flex items-center gap-[6px]">
-                        <img src="/assets/images/icons/tick-circle-white.svg" className="flex shrink-0 w-6 h-6" alt="icon"/>
-                        <p className="font-semibold text-white">Students analytics and export</p>
-                    </div>
-                </div>
-                <hr className="border-[#262A56]"/>
-                <p className="text-[#FF435A]">This plan is not available at this moment in your country, try again later.</p>
-                <div className="flex flex-col gap-3">
-                    <Link to="#" >
-                        <div className="flex items-center justify-center gap-3 w-full rounded-full border p-[14px_20px] transition-all duration-300 hover:bg-[#662FFF] hover:border-[#8661EE] hover:shadow-[-10px_-6px_10px_0_#7F33FF_inset] bg-[#070B24] border-[#24283E] shadow-[-10px_-6px_10px_0_#181A35_inset]">
-                            <span className="font-semibold text-white">Contact Our Sales</span>
-                        </div>
-                    </Link>  
-                </div>
-            </div>
-            <div className="card flex flex-col h-fit rounded-[20px] border border-[#262A56] p-[30px] gap-[30px] bg-[#080A2A]">
-                <img src="/assets/images/icons/note-favorite-white.svg" className="w-[60px] h-[60px]" alt="icon"/>
-                <div>
-                    <p className="font-extrabold text-[46px] leading-[69px] text-white">Rp 280.000</p>
-                    <p className="text-[#6B6C7F] mt-[6px]">Billed every single month</p>
+                    <p className="font-extrabold text-[46px] leading-[69px] text-white">Rp 200.000</p>
+                    <p className="text-[#6B6C7F] mt-[6px]">Sekali bayar — akses selamanya</p>
                 </div>
                 <hr className="border-[#262A56]"/>
                 <div className="flex flex-col gap-5">
