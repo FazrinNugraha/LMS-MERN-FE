@@ -16,20 +16,20 @@ export default function ManagerHomePage() {
           <h1 className="font-extrabold text-xl md:text-[28px] leading-[32px] md:leading-[42px]">
             Overview
           </h1>
-          <p className="text-[#838C9D] mt-1 text-sm md:text-base">
+          <p className="text-[#6a6a6a] mt-1 text-sm md:text-base">
             Grow your company quickly
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-2 md:gap-3 w-full md:w-auto">
           <a
             href="#"
-            className="flex-1 md:flex-none rounded-full border border-[#060A23] p-[12px_16px] md:p-[14px_20px] font-semibold text-sm md:text-base text-center md:text-nowrap hover:bg-[#F8FAFB] transition-all duration-300"
+            className="flex-1 md:flex-none rounded-full border border-[#0a0a0a] p-[12px_16px] md:p-[14px_20px] font-semibold text-sm md:text-base text-center md:text-nowrap hover:bg-[#fffaf0] transition-all duration-300"
           >
             Customize
           </a>
           <a
             href="#"
-            className="flex-1 md:flex-none rounded-full p-[12px_16px] md:p-[14px_20px] font-semibold text-sm md:text-base text-[#FFFFFF] bg-[#662FFF] text-center md:text-nowrap hover:bg-[#5528CC] transition-all duration-300 shadow-lg hover:shadow-xl"
+            className="flex-1 md:flex-none rounded-full p-[12px_16px] md:p-[14px_20px] font-semibold text-sm md:text-base text-[#FFFFFF] bg-[#0a0a0a] text-center md:text-nowrap hover:bg-[#1f1f1f] transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             Export Data
           </a>
@@ -37,7 +37,7 @@ export default function ManagerHomePage() {
       </header>
       <section
         id="Stats"
-        className="flex flex-col lg:flex-row rounded-[30px] p-[20px] md:p-[30px] gap-[20px] md:gap-[30px] bg-[#F8FAFB]"
+        className="flex flex-col lg:flex-row rounded-[30px] p-[20px] md:p-[30px] gap-[20px] md:gap-[30px] bg-[#fffaf0]"
       >
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:w-[500px] gap-[15px] md:gap-[30px]">
           {isLoading ? (
@@ -59,7 +59,7 @@ export default function ManagerHomePage() {
                   <p className="font-extrabold text-xl md:text-2xl leading-[30px] md:leading-[36px]">
                     {overview?.totalStudent || 0}
                   </p>
-                  <p className="text-[#838C9D] text-sm md:text-base">
+                  <p className="text-[#6a6a6a] text-sm md:text-base">
                     Total Students
                   </p>
                 </div>
@@ -74,7 +74,7 @@ export default function ManagerHomePage() {
                   <p className="font-extrabold text-xl md:text-2xl leading-[30px] md:leading-[36px]">
                     {overview?.totalCourse || 0}
                   </p>
-                  <p className="text-[#838C9D] text-sm md:text-base">
+                  <p className="text-[#6a6a6a] text-sm md:text-base">
                     Total Courses
                   </p>
                 </div>
@@ -89,7 +89,7 @@ export default function ManagerHomePage() {
                   <p className="font-extrabold text-xl md:text-2xl leading-[30px] md:leading-[36px]">
                     {overview?.totalVideo || 0}
                   </p>
-                  <p className="text-[#838C9D] text-sm md:text-base">
+                  <p className="text-[#6a6a6a] text-sm md:text-base">
                     Video Content
                   </p>
                 </div>
@@ -104,7 +104,7 @@ export default function ManagerHomePage() {
                   <p className="font-extrabold text-xl md:text-2xl leading-[30px] md:leading-[36px]">
                     {overview?.totalTexts || 0}
                   </p>
-                  <p className="text-[#838C9D] text-sm md:text-base">
+                  <p className="text-[#6a6a6a] text-sm md:text-base">
                     Text Content
                   </p>
                 </div>
@@ -117,7 +117,7 @@ export default function ManagerHomePage() {
             <div
               className="absolute rounded-full w-[180px] h-[180px] md:w-[230px] md:h-[230px] z-10"
               style={{
-                background: "conic-gradient(#C2ACFF 0% 25%, #662FFF 25% 100%)",
+                background: "conic-gradient(#C2ACFF 0% 25%, #0a0a0a 25% 100%)",
               }}
             ></div>
             <div className="flex justify-center items-center w-[100px] h-[100px] md:w-[130px] md:h-[130px] rounded-full bg-white z-10">
@@ -130,7 +130,7 @@ export default function ManagerHomePage() {
           </div>
           <div className="flex flex-col gap-[10px]">
             <div className="flex items-center gap-3">
-              <div className="w-4 h-4 md:w-5 md:h-5 rounded-full bg-[#662FFF]"></div>
+              <div className="w-4 h-4 md:w-5 md:h-5 rounded-full bg-[#0a0a0a]"></div>
               <p className="font-semibold text-xs md:text-sm leading-[18px] md:leading-[21px]">
                 Completed 75%
               </p>

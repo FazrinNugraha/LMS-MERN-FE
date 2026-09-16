@@ -13,11 +13,11 @@ export default function Logo({ to = "/", className = "", variant = "dark" }) {
       
       {/* Text Logo */}
       <div className="flex flex-col leading-none">
-        <span className={`font-extrabold text-xl ${variant === "dark" ? "text-gray-900" : "text-white"}`}>
+        <span className={`font-semibold text-xl ${variant === "dark" ? "text-ink" : "text-on-dark"}`}>
           Go-Learn
         </span>
-        <span className={`text-[10px] font-medium tracking-wider ${variant === "dark" ? "text-gray-600" : "text-[#838C9D]"}`}>
-          LEARNING PLATFORM
+        <span className={`text-[10px] font-medium tracking-[1.5px] uppercase ${variant === "dark" ? "text-muted" : "text-on-dark-soft"}`}>
+          Learning Platform
         </span>
       </div>
     </Link>

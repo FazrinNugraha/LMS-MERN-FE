@@ -6,7 +6,7 @@ export default function Students() {
   return (
     <section
       id="LatestStudents"
-      className="flex flex-col rounded-[30px] p-[20px] md:p-[30px] gap-[15px] md:gap-[30px] bg-[#F8FAFB]"
+      className="flex flex-col rounded-[30px] p-[20px] md:p-[30px] gap-[15px] md:gap-[30px] bg-[#fffaf0]"
     >
       <h2 className="font-extrabold text-lg md:text-[22px] leading-[27px] md:leading-[33px]">
         Latest Students
@@ -34,7 +34,7 @@ export default function Students() {
               className="w-4 h-4 md:w-auto md:h-auto"
               alt="icon"
             />
-            <p className="text-[#838C9D] text-sm md:text-base">
+            <p className="text-[#6a6a6a] text-sm md:text-base">
               {item.courses.length} courses enrolled
             </p>
           </div>

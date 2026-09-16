@@ -32,14 +32,14 @@ export default function ManageCourseDetailPage() {
         <div className="flex items-center gap-3">
           <Link
             to={`/manager/courses/edit/${id}`}
-            className="w-fit rounded-full border border-[#060A23] p-[14px_20px] font-semibold text-nowrap  hover:-translate-y-1 hover:shadow-lg hover:bg-white-600
+            className="w-fit rounded-full border border-[#0a0a0a] p-[14px_20px] font-semibold text-nowrap  hover:-translate-y-1 hover:shadow-lg hover:bg-white-600
               active:translate-y-0.5"
           >
             Edit Course
           </Link>
           <Link
             to={`/manager/courses/${id}/preview`}
-            className="w-fit rounded-full p-[14px_20px] font-semibold text-[#FFFFFF] bg-[#662FFF] text-nowrap hover:-translate-y-1 hover:shadow-lg hover:bg-white-600
+            className="w-fit rounded-full p-[14px_20px] font-semibold text-[#FFFFFF] bg-[#0a0a0a] text-nowrap hover:-translate-y-1 hover:shadow-lg hover:bg-white-600
               active:translate-y-0.5"
           >
             Preview
@@ -58,7 +58,7 @@ export default function ManageCourseDetailPage() {
           />
         </div>
         <div className="grid grid-cols-2 gap-5 w-full">
-          <div className="flex flex-col rounded-[20px] border border-[#CFDBEF] p-5 gap-4">
+          <div className="flex flex-col rounded-[20px] border border-[#e5e5e5] p-5 gap-4">
             <img
               src="/assets/images/icons/profile-2user-purple.svg"
               className="w-8 h-8"
@@ -66,7 +66,7 @@ export default function ManageCourseDetailPage() {
             />
             <p className="font-semibold">{course?.students.length}</p>
           </div>
-          <div className="flex flex-col rounded-[20px] border border-[#CFDBEF] p-5 gap-4">
+          <div className="flex flex-col rounded-[20px] border border-[#e5e5e5] p-5 gap-4">
             <img
               src="/assets/images/icons/crown-purple.svg"
               className="w-8 h-8"
@@ -74,7 +74,7 @@ export default function ManageCourseDetailPage() {
             />
             <p className="font-semibold">{course?.category?.name}</p>
           </div>
-          <div className="flex flex-col rounded-[20px] border border-[#CFDBEF] p-5 gap-4">
+          <div className="flex flex-col rounded-[20px] border border-[#e5e5e5] p-5 gap-4">
             <img
               src="/assets/images/icons/note-favorite-purple.svg"
               className="w-8 h-8"
@@ -82,7 +82,7 @@ export default function ManageCourseDetailPage() {
             />
             <p className="font-semibold">{course?.details?.length} Contents</p>
           </div>
-          <div className="flex flex-col rounded-[20px] border border-[#CFDBEF] p-5 gap-4">
+          <div className="flex flex-col rounded-[20px] border border-[#e5e5e5] p-5 gap-4">
             <img
               src="/assets/images/icons/cup-purple.svg"
               className="w-8 h-8"

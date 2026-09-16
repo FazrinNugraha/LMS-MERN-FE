@@ -36,15 +36,15 @@ export default function Header({type = "manager"}) {
   const getAvatarStyle = () => {
     if (type === "manager") {
       return {
-        bgColor: "#662FFF", // Purple - matching theme
+        bgColor: "#0a0a0a", // primary ink
         textColor: "#FFFFFF",
-        ringColor: "#8661EE"
+        ringColor: "#1f1f1f"
       };
     } else {
       return {
-        bgColor: "#10B981", // Green for student
+        bgColor: "#1a3a3a", // brand teal for student
         textColor: "#FFFFFF",
-        ringColor: "#34D399"
+        ringColor: "#2a4a4a"
       };
     }
   };
@@ -59,13 +59,13 @@ export default function Header({type = "manager"}) {
     >
       <form
         action=""
-        className="flex items-center w-full md:max-w-[450px] rounded-full border border-[#CFDBEF] gap-3 px-5 transition-all duration-300 focus-within:ring-2 focus-within:ring-[#662FFF]"
+        className="flex items-center w-full md:max-w-[450px] rounded-md border border-hairline gap-3 px-4 h-11 transition-all duration-300 focus-within:ring-2 focus-within:ring-ink"
       >
         <input
           type="text"
           name="search"
           id="search"
-          className="appearance-none outline-none w-full py-2 md:py-3 font-semibold text-sm md:text-base placeholder:font-normal placeholder:text-[#838C9D]"
+          className="appearance-none outline-none w-full py-2 md:py-3 font-semibold text-sm md:text-base placeholder:font-normal placeholder:text-text-muted"
           placeholder="Search course, student..."
           aria-label="Search"
         />
@@ -78,7 +78,7 @@ export default function Header({type = "manager"}) {
       <div className="relative flex items-center justify-end gap-[14px] flex-shrink-0">
         <div className="text-right hidden sm:block">
           <p className="font-semibold text-sm md:text-base">{session?.name}</p>
-          <p className="text-xs md:text-sm leading-[21px] text-[#838C9D]">
+          <p className="text-xs md:text-sm leading-[21px] text-text-muted">
             {session?.role}
           </p>
         </div>
@@ -107,17 +107,17 @@ export default function Header({type = "manager"}) {
               id="ProfileDropdown"
               className="absolute top-full right-0 z-20 mt-2"
             >
-              <ul className="flex flex-col w-[180px] md:w-[200px] rounded-[20px] border border-[#CFDBEF] p-4 md:p-5 gap-4 bg-white shadow-xl">
-                <li className="font-semibold text-sm md:text-base hover:text-[#662FFF] transition-colors duration-300">
+              <ul className="flex flex-col w-[180px] md:w-[200px] rounded-lg border border-hairline p-4 md:p-5 gap-4 bg-canvas shadow-xl">
+                <li className="font-semibold text-sm md:text-base hover:text-primary transition-colors duration-300">
                   <a href="#" onClick={(e) => handleComingSoon(e, 'My Account')}>My Account</a>
                 </li>
-                <li className="font-semibold text-sm md:text-base hover:text-[#662FFF] transition-colors duration-300">
+                <li className="font-semibold text-sm md:text-base hover:text-primary transition-colors duration-300">
                   <a href="#" onClick={(e) => handleComingSoon(e, 'Subscriptions')}>Subscriptions</a>
                 </li>
-                <li className="font-semibold text-sm md:text-base hover:text-[#662FFF] transition-colors duration-300">
+                <li className="font-semibold text-sm md:text-base hover:text-primary transition-colors duration-300">
                   <a href="#" onClick={(e) => handleComingSoon(e, 'Settings')}>Settings</a>
                 </li>
-                <li className="font-semibold text-sm md:text-base text-red-500 hover:text-red-600 transition-colors duration-300">
+                <li className="font-semibold text-sm md:text-base text-error transition-colors duration-300">
                   <button onClick={handleLogout} type="button" className="w-full text-left">
                     Logout
                   </button>

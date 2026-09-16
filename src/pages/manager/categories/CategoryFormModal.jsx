@@ -88,14 +88,14 @@ export default function CategoryFormModal({ isOpen, onClose, category = null }) 
       {/* Modal */}
       <div className="relative bg-white rounded-[20px] p-6 md:p-8 max-w-md w-full shadow-2xl animate-[slideUp_0.3s_ease-out]">
         <div className="flex items-center justify-between mb-6">
-          <h2 className="font-bold text-xl md:text-2xl text-[#060A23]">
+          <h2 className="font-bold text-xl md:text-2xl text-[#0a0a0a]">
             {isEdit ? "Edit Category" : "New Category"}
           </h2>
           <button
             onClick={onClose}
-            className="w-8 h-8 rounded-full hover:bg-[#F8FAFB] flex items-center justify-center transition-colors"
+            className="w-8 h-8 rounded-full hover:bg-[#fffaf0] flex items-center justify-center transition-colors"
           >
-            <span className="text-2xl text-[#838C9D]">×</span>
+            <span className="text-2xl text-[#6a6a6a]">×</span>
           </button>
         </div>
 
@@ -106,8 +106,8 @@ export default function CategoryFormModal({ isOpen, onClose, category = null }) 
             </label>
             <div
               className={`flex items-center w-full rounded-full border ${
-                errors.name ? "border-red-400" : "border-[#CFDBEF]"
-              } gap-3 px-5 transition-all duration-300 focus-within:ring-2 focus-within:ring-[#662FFF]`}
+                errors.name ? "border-red-400" : "border-[#e5e5e5]"
+              } gap-3 px-5 transition-all duration-300 focus-within:ring-2 focus-within:ring-[#0a0a0a]`}
             >
               <img
                 src="/assets/images/icons/crown-purple.svg"
@@ -118,7 +118,7 @@ export default function CategoryFormModal({ isOpen, onClose, category = null }) 
                 {...register("name")}
                 type="text"
                 id="name"
-                className="appearance-none outline-none w-full py-3 font-semibold placeholder:font-normal placeholder:text-[#838C9D] !bg-transparent"
+                className="appearance-none outline-none w-full py-3 font-semibold placeholder:font-normal placeholder:text-[#6a6a6a] !bg-transparent"
                 placeholder="e.g., Web Development, Design, Marketing"
               />
               {!errors.name && (
@@ -136,14 +136,14 @@ export default function CategoryFormModal({ isOpen, onClose, category = null }) 
             <button
               type="button"
               onClick={onClose}
-              className="flex-1 rounded-full border border-[#CFDBEF] py-3 font-semibold text-sm hover:bg-[#F8FAFB] transition-all duration-300"
+              className="flex-1 rounded-full border border-[#e5e5e5] py-3 font-semibold text-sm hover:bg-[#fffaf0] transition-all duration-300"
             >
               Cancel
             </button>
             <button
               type="submit"
               disabled={isPending}
-              className="flex-1 rounded-full py-3 font-semibold text-sm text-white bg-[#662FFF] hover:bg-[#5528CC] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
+              className="flex-1 rounded-full py-3 font-semibold text-sm text-white bg-[#0a0a0a] hover:bg-[#1f1f1f] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
             >
               {isPending
                 ? isEdit

@@ -12,7 +12,7 @@ export default function StudentPage() {
   return (
     <section
       id="LatestCourse"
-      className="flex flex-col rounded-[30px] p-[20px] md:p-[30px] gap-[15px] md:gap-[30px] bg-[#F8FAFB]"
+      className="flex flex-col rounded-[30px] p-[20px] md:p-[30px] gap-[15px] md:gap-[30px] bg-[#fffaf0]"
     >
       <h2 className="font-extrabold text-lg md:text-[22px] leading-[27px] md:leading-[33px]">
         Latest Courses

@@ -18,7 +18,7 @@ export default function ContentVideo({ content, handleNext }) {
         <h1 className="font-bold text-[32px] leading-[48px]">{content?.title}</h1>
         <button
           onClick={() => handleNext(content)}
-          type="button" className="w-fit rounded-full p-[14px_20px] font-semibold text-[#FFFFFF] bg-[#662FFF] text-nowrap hover:-translate-y-1 hover:shadow-lg hover:bg-white-600 active:translate-y-0.5">
+          type="button" className="w-fit rounded-full p-[14px_20px] font-semibold text-[#FFFFFF] bg-[#0a0a0a] text-nowrap hover:-translate-y-1 hover:shadow-lg hover:bg-white-600 active:translate-y-0.5">
           Next Course
         </button>
       </div>

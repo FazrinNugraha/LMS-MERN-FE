@@ -14,9 +14,9 @@ export default function ConfirmationModal({
   if (!isOpen) return null
 
   const typeStyles = {
-    danger: "bg-red-500 hover:bg-red-600",
-    warning: "bg-yellow-500 hover:bg-yellow-600",
-    info: "bg-[#662FFF] hover:bg-[#5528CC]"
+    danger: "bg-error",
+    warning: "bg-warning",
+    info: "bg-bg-primary hover:bg-primary-active"
   }
 
   return (
@@ -28,22 +28,22 @@ export default function ConfirmationModal({
       />
       
       {/* Modal */}
-      <div className="relative bg-white rounded-[20px] p-6 md:p-8 max-w-md w-full shadow-2xl animate-[slideUp_0.3s_ease-out]">
+      <div className="relative bg-canvas rounded-xl p-6 md:p-8 max-w-md w-full shadow-2xl animate-[slideUp_0.3s_ease-out]">
         <div className="flex flex-col gap-4">
           {/* Icon */}
-          <div className={`w-12 h-12 rounded-full ${type === 'danger' ? 'bg-red-100' : type === 'warning' ? 'bg-yellow-100' : 'bg-purple-100'} flex items-center justify-center mx-auto`}>
+          <div className={`w-12 h-12 rounded-full ${type === 'danger' ? 'bg-error/10' : type === 'warning' ? 'bg-warning/10' : 'bg-surface-card'} flex items-center justify-center mx-auto`}>
             {type === 'danger' && (
-              <svg className="w-6 h-6 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="w-6 h-6 text-error" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
               </svg>
             )}
             {type === 'warning' && (
-              <svg className="w-6 h-6 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="w-6 h-6 text-warning" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
               </svg>
             )}
             {type === 'info' && (
-              <svg className="w-6 h-6 text-[#662FFF]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             )}
@@ -51,10 +51,10 @@ export default function ConfirmationModal({
 
           {/* Content */}
           <div className="text-center">
-            <h3 className="font-bold text-lg md:text-xl text-[#060A23] mb-2">
+            <h3 className="font-bold text-lg md:text-xl text-ink mb-2">
               {title}
             </h3>
-            <p className="text-[#838C9D] text-sm md:text-base">
+            <p className="text-text-muted text-sm md:text-base">
               {message}
             </p>
           </div>
@@ -63,7 +63,7 @@ export default function ConfirmationModal({
           <div className="flex flex-col sm:flex-row gap-3 mt-2">
             <button
               onClick={onClose}
-              className="flex-1 rounded-full border border-[#CFDBEF] p-3 font-semibold text-sm md:text-base hover:bg-[#F8FAFB] transition-all duration-300"
+              className="flex-1 rounded-md border border-hairline p-3 font-semibold h-11 text-sm md:text-base hover:bg-surface-soft transition-all duration-300"
             >
               {cancelText}
             </button>
@@ -72,7 +72,7 @@ export default function ConfirmationModal({
                 onConfirm()
                 onClose()
               }}
-              className={`flex-1 rounded-full p-3 font-semibold text-sm md:text-base text-white transition-all duration-300 shadow-lg hover:shadow-xl ${typeStyles[type]}`}
+              className={`flex-1 rounded-md p-3 font-semibold h-11 text-sm md:text-base text-white transition-all duration-300 shadow-lg hover:shadow-xl ${typeStyles[type]}`}
             >
               {confirmText}
             </button>

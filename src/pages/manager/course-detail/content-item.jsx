@@ -27,7 +27,7 @@ export default function ContentItem({ id, index, type, title, coursesId }) {
   return (
     <div className="card flex items-center gap-5">
       <div className="relative flex shrink-0 w-35 h-27.5 ">
-        <p className="absolute -top-2.5 -left-[10px] flex shrink-0 w-[30px] h-[30px] rounded-full items-center justify-center text-center bg-[#662FFF] text-white">
+        <p className="absolute -top-2.5 -left-[10px] flex shrink-0 w-[30px] h-[30px] rounded-full items-center justify-center text-center bg-[#0a0a0a] text-white">
           <span className="font-bold text-sm leading-5.25">{index}</span>
         </p>
         <div className="rounded-[20px] bg-[#D9D9D9] overflow-hidden">
@@ -49,14 +49,14 @@ export default function ContentItem({ id, index, type, title, coursesId }) {
               className="w-5 h-5"
               alt="icon"
             />
-            <p className="text-[#838C9D]">{type} Content</p>
+            <p className="text-[#6a6a6a]">{type} Content</p>
           </div>
         </div>
       </div>
       <div className="flex justify-end items-center gap-3">
         <Link
           to={`/manager/courses/${coursesId}/edit/${id}`}
-          className="w-fit rounded-full border border-[#060A23] p-[14px_20px] font-semibold text-nowrap  hover:-translate-y-1 hover:shadow-lg hover:bg-white-600
+          className="w-fit rounded-full border border-[#0a0a0a] p-[14px_20px] font-semibold text-nowrap  hover:-translate-y-1 hover:shadow-lg hover:bg-white-600
               active:translate-y-0.5"
         >
           Edit Content
@@ -65,7 +65,7 @@ export default function ContentItem({ id, index, type, title, coursesId }) {
           type="button"
           disabled={isLoading}
           onClick={handleDelete}
-          className="w-fit rounded-full p-[14px_20px] bg-[#FF435A] font-semibold text-white text-nowrap hover:-translate-y-1 hover:shadow-lg hover:bg-white-600
+          className="w-fit rounded-full p-[14px_20px] bg-[#ef4444] font-semibold text-white text-nowrap hover:-translate-y-1 hover:shadow-lg hover:bg-white-600
               active:translate-y-0.5"
         >
           {isLoading ? "Deleting..." : "Delete"}

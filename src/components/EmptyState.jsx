@@ -11,7 +11,7 @@ export default function EmptyState({
 }) {
   return (
     <div className="flex flex-col items-center justify-center py-12 md:py-16 px-4">
-      <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-[#F8FAFB] flex items-center justify-center mb-6">
+      <div className="w-20 h-20 md:w-24 md:h-24 rounded-xl bg-surface-card flex items-center justify-center mb-6">
         <img 
           src={`/assets/images/icons/${icon}-purple.svg`}
           className="w-10 h-10 md:w-12 md:h-12 opacity-50"
@@ -19,18 +19,18 @@ export default function EmptyState({
         />
       </div>
       
-      <h3 className="font-bold text-lg md:text-xl text-[#060A23] mb-2 text-center">
+      <h3 className="font-bold text-lg md:text-xl text-ink mb-2 text-center">
         {title}
       </h3>
       
-      <p className="text-[#838C9D] text-sm md:text-base text-center max-w-md mb-6">
+      <p className="text-text-muted text-sm md:text-base text-center max-w-md mb-6">
         {description}
       </p>
       
       {actionText && actionLink && (
         <Link 
           to={actionLink}
-          className="rounded-full px-6 py-3 font-semibold text-sm md:text-base text-white bg-[#662FFF] hover:bg-[#5528CC] transition-all duration-300 shadow-lg hover:shadow-xl"
+          className="rounded-md px-6 py-3 font-semibold h-11 text-sm md:text-base text-white bg-bg-primary hover:bg-primary-active transition-all duration-300 shadow-lg hover:shadow-xl"
         >
           {actionText}
         </Link>

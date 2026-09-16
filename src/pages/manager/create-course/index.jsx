@@ -78,12 +78,12 @@ export default function ManageCreateCoursePage() {
           <h1 className="font-extrabold text-[28px] leading-[42px]">
             New Course
           </h1>
-          <p className="text-[#838C9D] mt-[1]">Create new future for company</p>
+          <p className="text-[#6a6a6a] mt-[1]">Create new future for company</p>
         </div>
         <div className="flex items-center gap-3">
           <a
             href="#"
-            className="w-fit rounded-full border border-[#060A23] p-[14px_20px] font-semibold text-nowrap"
+            className="w-fit rounded-full border border-[#0a0a0a] p-[14px_20px] font-semibold text-nowrap"
           >
             Import from BWA
           </a>
@@ -91,7 +91,7 @@ export default function ManageCreateCoursePage() {
       </header>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="flex flex-col w-full rounded-[30px] p-[30px] gap-[30px] bg-[#F8FAFB]"
+        className="flex flex-col w-full rounded-[30px] p-[30px] gap-[30px] bg-[#fffaf0]"
       >
         {/* Grid 2 Columns untuk Course Name dan Tagline */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[30px]">
@@ -99,7 +99,7 @@ export default function ManageCreateCoursePage() {
             <label htmlFor="title" className="font-semibold">
               Course Name
             </label>
-            <div className="flex items-center w-full rounded-full border border-[#CFDBEF] gap-3 px-5 transition-all duration-300 focus-within:ring-2 focus-within:ring-[#662FFF]">
+            <div className="flex items-center w-full rounded-full border border-[#e5e5e5] gap-3 px-5 transition-all duration-300 focus-within:ring-2 focus-within:ring-[#0a0a0a]">
               <img
                 src="/assets/images/icons/note-favorite-black.svg"
                 className="w-6 h-6"
@@ -109,11 +109,11 @@ export default function ManageCreateCoursePage() {
                 {...register("name")}
                 type="text"
                 id="title"
-                className="appearance-none outline-none w-full py-3 font-semibold placeholder:font-normal placeholder:text-[#838C9D] !bg-transparent"
+                className="appearance-none outline-none w-full py-3 font-semibold placeholder:font-normal placeholder:text-[#6a6a6a] !bg-transparent"
                 placeholder="Write better name for your course"
               />
             </div>
-            <span className="error-message text-[#FF435A]">
+            <span className="error-message text-[#ef4444]">
               {errors?.name?.message}
             </span>
           </div>
@@ -122,7 +122,7 @@ export default function ManageCreateCoursePage() {
             <label htmlFor="tagline" className="font-semibold">
               Course Tagline
             </label>
-            <div className="flex items-center w-full rounded-full border border-[#CFDBEF] gap-3 px-5 transition-all duration-300 focus-within:ring-2 focus-within:ring-[#662FFF]">
+            <div className="flex items-center w-full rounded-full border border-[#e5e5e5] gap-3 px-5 transition-all duration-300 focus-within:ring-2 focus-within:ring-[#0a0a0a]">
               <img
                 src="/assets/images/icons/bill-black.svg"
                 className="w-6 h-6"
@@ -132,11 +132,11 @@ export default function ManageCreateCoursePage() {
                 {...register("tagline")}
                 type="text"
                 id="tagline"
-                className="appearance-none outline-none w-full py-3 font-semibold placeholder:font-normal placeholder:text-[#838C9D] !bg-transparent"
+                className="appearance-none outline-none w-full py-3 font-semibold placeholder:font-normal placeholder:text-[#6a6a6a] !bg-transparent"
                 placeholder="Write tagline for better copy"
               />
             </div>
-            <span className="error-message text-[#FF435A]">
+            <span className="error-message text-[#ef4444]">
               {errors?.tagline?.message}
             </span>
           </div>
@@ -150,7 +150,7 @@ export default function ManageCreateCoursePage() {
             </label>
             <div
               id="thumbnail-preview-container"
-              className="relative flex shrink-0 w-full h-[200px] rounded-[20px] border border-[#CFDBEF] overflow-hidden"
+              className="relative flex shrink-0 w-full h-[200px] rounded-[20px] border border-[#e5e5e5] overflow-hidden"
             >
               {!file && (
                 <button
@@ -164,7 +164,7 @@ export default function ManageCreateCoursePage() {
                     className="w-6 h-6"
                     alt="icon"
                   />
-                  <span className="text-[#838C9D]">Add an attachment</span>
+                  <span className="text-[#6a6a6a]">Add an attachment</span>
                 </button>
               )}
 
@@ -201,7 +201,7 @@ export default function ManageCreateCoursePage() {
               accept="image/*"
               className="absolute bottom-0 left-1/4 -z-10"
             />
-            <span className="error-message text-[#FF435A]">
+            <span className="error-message text-[#ef4444]">
               {errors?.thumbnail?.message}
             </span>
           </div>
@@ -210,7 +210,7 @@ export default function ManageCreateCoursePage() {
             <label htmlFor="category" className="font-semibold">
               Select Category
             </label>
-            <div className="flex items-center w-full rounded-full border border-[#CFDBEF] gap-3 px-5 transition-all duration-300 focus-within:ring-2 focus-within:ring-[#662FFF]">
+            <div className="flex items-center w-full rounded-full border border-[#e5e5e5] gap-3 px-5 transition-all duration-300 focus-within:ring-2 focus-within:ring-[#0a0a0a]">
               <img
                 src="/assets/images/icons/bill-black.svg"
                 className="w-6 h-6"
@@ -219,7 +219,7 @@ export default function ManageCreateCoursePage() {
               <select
                 {...register("categoryId")}
                 id="category"
-                className="appearance-none outline-none w-full py-3 px-2 -mx-2 font-semibold placeholder:font-normal placeholder:text-[#838C9D] !bg-transparent"
+                className="appearance-none outline-none w-full py-3 px-2 -mx-2 font-semibold placeholder:font-normal placeholder:text-[#6a6a6a] !bg-transparent"
               >
                 <option value="" hidden>
                   Choose one category
@@ -236,7 +236,7 @@ export default function ManageCreateCoursePage() {
                 alt="icon"
               />
             </div>
-            <span className="error-message text-[#FF435A]">
+            <span className="error-message text-[#ef4444]">
               {errors?.categoryId?.message}
             </span>
           </div>
@@ -247,7 +247,7 @@ export default function ManageCreateCoursePage() {
           <label htmlFor="desc" className="font-semibold">
             Description
           </label>
-          <div className="flex w-full rounded-[20px] border border-[#CFDBEF] gap-3 p-5  transition-all duration-300 focus-within:ring-2 focus-within:ring-[#662FFF] ring-2 ring-[#FF435A]">
+          <div className="flex w-full rounded-[20px] border border-[#e5e5e5] gap-3 p-5  transition-all duration-300 focus-within:ring-2 focus-within:ring-[#0a0a0a] ring-2 ring-[#ef4444]">
             <img
               src="/assets/images/icons/note-black.png"
               className="w-6 h-6"
@@ -258,11 +258,11 @@ export default function ManageCreateCoursePage() {
               
               id="desc"
               rows="5"
-              className="appearance-none outline-none w-full font-semibold placeholder:font-normal placeholder:text-[#838C9D] !bg-transparent"
+              className="appearance-none outline-none w-full font-semibold placeholder:font-normal placeholder:text-[#6a6a6a] !bg-transparent"
               placeholder="Explain what this course about"
             ></textarea>
           </div>
-          <span className="error-message text-[#FF435A]">
+          <span className="error-message text-[#ef4444]">
             {errors?.description?.message}
           </span>
         </div>
@@ -270,14 +270,14 @@ export default function ManageCreateCoursePage() {
         <div className="flex items-center gap-[14px]">
           <button
             type="button"
-            className="w-full rounded-full border border-[#060A23] p-[14px_20px] font-semibold text-nowrap"
+            className="w-full rounded-full border border-[#0a0a0a] p-[14px_20px] font-semibold text-nowrap"
           >
             Save as Draft
           </button>
           <button
             type="submit"
             disabled={data?.course ? mutateUpdate.isPending : mutateCreate.isPending}
-            className="w-full rounded-full p-[14px_20px] font-semibold text-[#FFFFFF] bg-[#662FFF] text-nowrap hover:bg-[#5528CC] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
+            className="w-full rounded-full p-[14px_20px] font-semibold text-[#FFFFFF] bg-[#0a0a0a] text-nowrap hover:bg-[#1f1f1f] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
           >
             {data?.course ? (mutateUpdate.isPending ? "Updating..." : "Update Now") : (mutateCreate.isPending ? "Creating..." : "Create Now")}
           </button>

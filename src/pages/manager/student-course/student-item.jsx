@@ -49,7 +49,7 @@ export default function StudentsItem({ imageUrl, name, TotalCourse, id }) {
           type="button"
           disabled={isLoading}
           onClick={handleDelete}
-          className="w-fit rounded-full p-[14px_20px] bg-[#FF435A] font-semibold text-white text-nowrap"
+          className="w-fit rounded-full p-[14px_20px] bg-[#ef4444] font-semibold text-white text-nowrap"
         >
             Delete
         </button>

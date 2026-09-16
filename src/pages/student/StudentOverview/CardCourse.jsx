@@ -12,7 +12,7 @@ export default function CardCourse({imageUrl,id,title,category}) {
                             <Link to={`/student/detail-courses/${id}`} className="font-bold text-base md:text-xl leading-[24px] md:leading-[30px] line-clamp-1">{title}</Link>
                             <div className="flex items-center gap-[6px] mt-[6px]">
                                 <img src="/assets/images/icons/crown-purple.svg" className="w-4 h-4 md:w-auto md:h-auto" alt="icon"/>
-                                <p className="text-[#838C9D] text-sm md:text-base">{category}</p>
+                                <p className="text-[#6a6a6a] text-sm md:text-base">{category}</p>
                             </div>
                         </div>
                     </div>

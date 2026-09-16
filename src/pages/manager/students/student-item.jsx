@@ -46,14 +46,14 @@ export default function StudentsItem({ imageUrl, name, TotalCourse, id }) {
               className="w-5 h-5"
               alt="icon"
             />
-            <p className="text-[#838C9D]">{TotalCourse} Course Joined</p>
+            <p className="text-[#6a6a6a]">{TotalCourse} Course Joined</p>
           </div>
         </div>
       </div>
       <div className="flex justify-end items-center gap-3">
         <Link
           to={`/manager/students/edit/${id}`}
-          className="w-fit rounded-full border border-[#060A23] p-[14px_20px] font-semibold text-nowrap"
+          className="w-fit rounded-full border border-[#0a0a0a] p-[14px_20px] font-semibold text-nowrap"
         >
           Edit Profile
         </Link>
@@ -61,7 +61,7 @@ export default function StudentsItem({ imageUrl, name, TotalCourse, id }) {
           type="button"
           disabled={isLoading}
           onClick={handleDelete}
-          className="w-fit rounded-full p-[14px_20px] bg-[#FF435A] font-semibold text-white text-nowrap"
+          className="w-fit rounded-full p-[14px_20px] bg-[#ef4444] font-semibold text-white text-nowrap"
         >
           {isLoading ? "Deleting..." : "Delete"}
         </button>

@@ -39,7 +39,7 @@ export default function ManageCategoriesPage() {
           <h1 className="font-extrabold text-xl md:text-[28px] leading-[32px] md:leading-[42px]">
             Manage Categories
           </h1>
-          <p className="text-[#838C9D] mt-1 text-sm md:text-base">
+          <p className="text-[#6a6a6a] mt-1 text-sm md:text-base">
             Organize your courses into categories
           </p>
         </div>
@@ -47,7 +47,7 @@ export default function ManageCategoriesPage() {
         <div className="flex flex-wrap items-center gap-2 md:gap-3 w-full md:w-auto">
           <button
             onClick={handleCreate}
-            className="flex-1 md:flex-none rounded-full p-[12px_16px] md:p-[14px_20px] font-semibold text-sm md:text-base text-[#FFFFFF] bg-[#662FFF] text-center md:text-nowrap hover:bg-[#5528CC] transition-all duration-300 shadow-lg hover:shadow-xl"
+            className="flex-1 md:flex-none rounded-full p-[12px_16px] md:p-[14px_20px] font-semibold text-sm md:text-base text-[#FFFFFF] bg-[#0a0a0a] text-center md:text-nowrap hover:bg-[#1f1f1f] transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             New Category
           </button>
@@ -56,7 +56,7 @@ export default function ManageCategoriesPage() {
 
       <section
         id="CategoryList"
-        className="flex flex-col w-full rounded-[30px] p-[20px] md:p-[30px] gap-[15px] md:gap-[30px] bg-[#F8FAFB]"
+        className="flex flex-col w-full rounded-[30px] p-[20px] md:p-[30px] gap-[15px] md:gap-[30px] bg-[#fffaf0]"
       >
         {isLoading ? (
           <>
@@ -80,7 +80,7 @@ export default function ManageCategoriesPage() {
         ) : (
           <>
             <div className="flex items-center justify-between mb-2">
-              <p className="text-[#838C9D] text-sm">
+              <p className="text-[#6a6a6a] text-sm">
                 {categories.length} {categories.length === 1 ? "Category" : "Categories"}
               </p>
             </div>

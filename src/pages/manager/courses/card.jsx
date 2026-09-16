@@ -36,7 +36,7 @@ export default function CardCourses({
 
   return (
     <>
-      <div className="card flex flex-col md:flex-row items-start md:items-center gap-3 md:gap-5 p-4 md:p-5 rounded-[20px] border border-[#CFDBEF] bg-white hover:shadow-lg transition-all duration-300">
+      <div className="card flex flex-col md:flex-row items-start md:items-center gap-3 md:gap-5 p-4 md:p-5 rounded-[20px] border border-[#e5e5e5] bg-white hover:shadow-lg transition-all duration-300">
         <div className="flex shrink-0 w-full md:w-[140px] h-[180px] md:h-[110px] rounded-[20px] bg-[#D9D9D9] overflow-hidden">
           <img
             src={imageUrl}
@@ -56,7 +56,7 @@ export default function CardCourses({
                 className="w-4 h-4 md:w-5 md:h-5"
                 alt="icon"
               />
-              <p className="text-[#838C9D] text-sm md:text-base">
+              <p className="text-[#6a6a6a] text-sm md:text-base">
                 {totalStudents} Students
               </p>
             </div>
@@ -66,7 +66,7 @@ export default function CardCourses({
                 className="w-4 h-4 md:w-5 md:h-5"
                 alt="icon"
               />
-              <p className="text-[#838C9D] text-sm md:text-base">{category}</p>
+              <p className="text-[#6a6a6a] text-sm md:text-base">{category}</p>
             </div>
           </div>
         </div>
@@ -74,13 +74,13 @@ export default function CardCourses({
         <div className="flex justify-end items-center gap-2 md:gap-3 w-full md:w-auto">
           <Link
             to={`/manager/courses/students/${id}`}
-            className="w-full md:w-fit rounded-full border border-[#060A23] p-[12px_16px] md:p-[14px_20px] font-semibold text-sm md:text-base text-center md:text-nowrap hover:bg-[#F8FAFB] transition-all duration-300"
+            className="w-full md:w-fit rounded-full border border-[#0a0a0a] p-[12px_16px] md:p-[14px_20px] font-semibold text-sm md:text-base text-center md:text-nowrap hover:bg-[#fffaf0] transition-all duration-300"
           >
             Student
           </Link>
           <Link
             to={`/manager/courses/${id}`}
-            className="w-full md:w-fit rounded-full border border-[#060A23] p-[12px_16px] md:p-[14px_20px] font-semibold text-sm md:text-base text-center md:text-nowrap hover:bg-[#F8FAFB] transition-all duration-300"
+            className="w-full md:w-fit rounded-full border border-[#0a0a0a] p-[12px_16px] md:p-[14px_20px] font-semibold text-sm md:text-base text-center md:text-nowrap hover:bg-[#fffaf0] transition-all duration-300"
           >
             Manage
           </Link>

@@ -108,7 +108,7 @@ export default function ManageContentCreatePage() {
             <h1 className="font-extrabold text-[28px] leading-[42px]">
               {content === undefined ? "Add" : "Edit"} Content
             </h1>
-            <p className="text-[#838C9D] mt-[1]">
+            <p className="text-[#6a6a6a] mt-[1]">
               Give a best content for the course
             </p>
           </div>
@@ -116,14 +116,14 @@ export default function ManageContentCreatePage() {
       </header>
 
       <form
-        className="flex flex-col w-[930px] rounded-[30px] p-[30px] gap-[30px] bg-[#F8FAFB]"
+        className="flex flex-col w-[930px] rounded-[30px] p-[30px] gap-[30px] bg-[#fffaf0]"
         onSubmit={handleSubmit(onSubmit)}
       >
         {/* TITLE */}
         <div className="flex flex-col gap-[10px]">
           <label className="font-semibold">Content Title</label>
 
-          <div className="flex items-center w-full rounded-full border border-[#CFDBEF] gap-3 px-5">
+          <div className="flex items-center w-full rounded-full border border-[#e5e5e5] gap-3 px-5">
             <img
               src="/assets/images/icons/note-favorite-black.svg"
               className="w-6 h-6"
@@ -137,7 +137,7 @@ export default function ManageContentCreatePage() {
               placeholder="Enter content title"
             />
           </div>
-          <span className="error-message text-[#FF435A]">
+          <span className="error-message text-[#ef4444]">
             {errors?.title?.message}
           </span>
         </div>
@@ -146,7 +146,7 @@ export default function ManageContentCreatePage() {
         <div className="flex flex-col gap-[10px]">
           <label className="font-semibold">Select Type</label>
 
-          <div className="flex items-center w-full rounded-full border border-[#CFDBEF] gap-3 px-5">
+          <div className="flex items-center w-full rounded-full border border-[#e5e5e5] gap-3 px-5">
             <img
               src="/assets/images/icons/crown-black.svg"
               className="w-6 h-6"
@@ -168,7 +168,7 @@ export default function ManageContentCreatePage() {
               alt="icon"
             />
           </div>
-          <span className="error-message text-[#FF435A]">
+          <span className="error-message text-[#ef4444]">
             {errors?.type?.message}
           </span>
         </div>
@@ -178,7 +178,7 @@ export default function ManageContentCreatePage() {
           <div className="flex flex-col gap-[10px]">
             <label className="font-semibold">Youtube Video ID</label>
 
-            <div className="flex items-center w-full rounded-full border border-[#CFDBEF] gap-3 px-5">
+            <div className="flex items-center w-full rounded-full border border-[#e5e5e5] gap-3 px-5">
               <img
                 src="/assets/images/icons/bill-black.svg"
                 className="w-6 h-6"
@@ -192,7 +192,7 @@ export default function ManageContentCreatePage() {
                 placeholder="Enter Youtube Video ID"
               />
             </div>
-            <span className="error-message text-[#FF435A]">
+            <span className="error-message text-[#ef4444]">
               {errors?.youtubeId?.message}
             </span>
           </div>
@@ -221,7 +221,7 @@ export default function ManageContentCreatePage() {
                 trigger("text");
               }}
             />
-            <span className="error-message text-[#FF435A]">
+            <span className="error-message text-[#ef4444]">
               {errors?.text?.message}
             </span>
           </div>
@@ -241,7 +241,7 @@ export default function ManageContentCreatePage() {
           <button
             type="submit"
             disabled={content === undefined ? mutateCreateContent.isLoading : mutateUpdateContent.isLoading}
-            className="w-full rounded-full p-[14px_20px] font-semibold text-white bg-[#662FFF] hover:-translate-y-1 hover:shadow-lg hover:bg-white-600
+            className="w-full rounded-full p-[14px_20px] font-semibold text-white bg-[#0a0a0a] hover:-translate-y-1 hover:shadow-lg hover:bg-white-600
               active:translate-y-0.5"
           >
             {content === undefined ? "Add" : "Edit"} Content Now

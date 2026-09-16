@@ -1,11 +1,70 @@
 @import "tailwindcss";
 
+/* ============================================================
+   Design tokens — design.md ("Clay" system)
+   Semua warna di-reference via class Tailwind (bg-canvas,
+   text-ink, bg-brand-pink, dst) — tidak ada inline hex di JSX.
+   ============================================================ */
+@theme {
+    /* Colors */
+    --color-primary: #0a0a0a;
+    --color-primary-active: #1f1f1f;
+    --color-primary-disabled: #e5e5e5;
+    --color-ink: #0a0a0a;
+    --color-body: #3a3a3a;
+    --color-body-strong: #1a1a1a;
+    --color-muted: #6a6a6a;
+    --color-muted-soft: #9a9a9a;
+    --color-hairline: #e5e5e5;
+    --color-hairline-soft: #f0f0f0;
+    --color-canvas: #fffaf0;
+    --color-surface-soft: #faf5e8;
+    --color-surface-card: #f5f0e0;
+    --color-surface-strong: #ebe6d6;
+    --color-surface-dark: #0a1a1a;
+    --color-surface-dark-elevated: #1a2a2a;
+    --color-on-primary: #ffffff;
+    --color-on-dark: #ffffff;
+    --color-on-dark-soft: #a0a0a0;
+    --color-brand-pink: #ff4d8b;
+    --color-brand-teal: #1a3a3a;
+    --color-brand-lavender: #b8a4ed;
+    --color-brand-peach: #ffb084;
+    --color-brand-ochre: #e8b94a;
+    --color-brand-mint: #a4d4c5;
+    --color-brand-coral: #ff6b5a;
+    --color-success: #22c55e;
+    --color-warning: #f59e0b;
+    --color-error: #ef4444;
+
+    /* Typography */
+    --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+    /* Radius */
+    --radius-xs: 6px;
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+
+    /* Spacing */
+    --spacing-section: 96px;
+}
+
 body {
-    font-family: "Poppins";
-    color: #060A23;
+    font-family: var(--font-sans);
+    color: var(--color-ink);
+    background-color: var(--color-canvas);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+}
+
+/* Display headline helper — Plain Black substitute: Inter 500 negative tracking */
+.display-heading {
+    font-weight: 500;
+    letter-spacing: -0.04em;
+    line-height: 1.05;
 }
 
 /* Hide scrollbar for Chrome, Safari, and Opera */
@@ -53,29 +112,29 @@ body {
 
 .animate-shimmer {
     animation: shimmer 2s infinite linear;
-    background: linear-gradient(to right, #f0f0f0 4%, #e0e0e0 25%, #f0f0f0 36%);
+    background: linear-gradient(to right, var(--color-surface-soft) 4%, var(--color-surface-strong) 25%, var(--color-surface-soft) 36%);
     background-size: 1000px 100%;
 }
 
 /* React Quill Custom Styles */
 .quill {
-    border-radius: 20px;
+    border-radius: 12px;
     overflow: hidden;
-    border: 1px solid #CFDBEF;
-    background: white;
+    border: 1px solid var(--color-hairline);
+    background: var(--color-canvas);
 }
 
 .quill .ql-toolbar {
     border: none !important;
-    border-bottom: 1px solid #CFDBEF !important;
-    background: #F8FAFB;
+    border-bottom: 1px solid var(--color-hairline) !important;
+    background: var(--color-surface-soft);
     padding: 10px 16px !important;
-    font-family: "Poppins", sans-serif;
+    font-family: "Inter", sans-serif;
 }
 
 .quill .ql-container {
     border: none !important;
-    font-family: "Poppins", sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 14px;
     min-height: 150px;
 }
@@ -83,36 +142,36 @@ body {
 .quill .ql-editor {
     padding: 16px !important;
     min-height: 150px;
-    color: #060A23;
+    color: var(--color-ink);
 }
 
 .quill .ql-editor.ql-blank::before {
-    color: #838C9D;
+    color: var(--color-muted);
     font-style: normal;
-    font-family: "Poppins", sans-serif;
+    font-family: "Inter", sans-serif;
 }
 
 .quill .ql-toolbar button:hover,
 .quill .ql-toolbar button.ql-active {
-    color: #662FFF !important;
+    color: var(--color-primary) !important;
 }
 
 .quill .ql-toolbar button:hover .ql-stroke,
 .quill .ql-toolbar button.ql-active .ql-stroke {
-    stroke: #662FFF !important;
+    stroke: var(--color-primary) !important;
 }
 
 .quill .ql-toolbar button:hover .ql-fill,
 .quill .ql-toolbar button.ql-active .ql-fill {
-    fill: #662FFF !important;
+    fill: var(--color-primary) !important;
 }
 
 .quill .ql-toolbar .ql-picker-label:hover,
 .quill .ql-toolbar .ql-picker-label.ql-active {
-    color: #662FFF !important;
+    color: var(--color-primary) !important;
 }
 
 .quill .ql-toolbar .ql-picker-label:hover .ql-stroke,
 .quill .ql-toolbar .ql-picker-label.ql-active .ql-stroke {
-    stroke: #662FFF !important;
+    stroke: var(--color-primary) !important;
 }

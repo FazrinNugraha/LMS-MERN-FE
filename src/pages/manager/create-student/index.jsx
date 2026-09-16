@@ -80,12 +80,12 @@ export default function ManageCreateStudentPage() {
           <h1 className="font-extrabold text-[28px] leading-[42px]">
             {student === undefined ? "Add Student" : "Update Student"}
           </h1>
-          <p className="text-[#838C9D] mt-[1]">Create new future for company</p>
+          <p className="text-[#6a6a6a] mt-[1]">Create new future for company</p>
         </div>
         <div className="flex items-center gap-3">
           <Link
             to="#"
-            clLinkssName="w-fit rounded-full border border-[#060A23] p-[14px_20px] font-semibold text-nowrap"
+            clLinkssName="w-fit rounded-full border border-[#0a0a0a] p-[14px_20px] font-semibold text-nowrap"
           >
             Import from BWA
           </Link>
@@ -93,7 +93,7 @@ export default function ManageCreateStudentPage() {
       </header>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="flex flex-col w-[550px] rounded-[30px] p-[30px] gap-[30px] bg-[#F8FAFB]"
+        className="flex flex-col w-[550px] rounded-[30px] p-[30px] gap-[30px] bg-[#fffaf0]"
       >
         <div className="relative flex flex-col gap-[10px]">
           <label htmlFor="thumbnail" className="font-semibold">
@@ -102,7 +102,7 @@ export default function ManageCreateStudentPage() {
           <div className="flex items-center gap-[14px]">
             <div
               id="thumbnail-preview-container"
-              className="relative flex shrink-0 w-[120px] h-[120px] rounded-[20px] border border-[#CFDBEF] overflow-hidden"
+              className="relative flex shrink-0 w-[120px] h-[120px] rounded-[20px] border border-[#e5e5e5] overflow-hidden"
             >
               {file === null && (
                 <button
@@ -149,14 +149,14 @@ export default function ManageCreateStudentPage() {
             className="absolute bottom-0 left-1/4 -z-10"
           />
         </div>
-        <span className="error-message text-[#FF435A]">
+        <span className="error-message text-[#ef4444]">
           {errors?.photo?.message}
         </span>
         <div className="flex flex-col gap-[10px]">
           <label for="name" className="font-semibold">
             Full Name
           </label>
-          <div className="flex items-center w-full rounded-full border border-[#CFDBEF] gap-3 px-5 transition-all duration-300 focus-within:ring-2 focus-within:ring-[#662FFF]">
+          <div className="flex items-center w-full rounded-full border border-[#e5e5e5] gap-3 px-5 transition-all duration-300 focus-within:ring-2 focus-within:ring-[#0a0a0a]">
             <img
               src="/assets/images/icons/note-favorite-black.svg"
               className="w-6 h-6"
@@ -166,19 +166,19 @@ export default function ManageCreateStudentPage() {
               {...register("name")}
               type="text"
               id="name"
-              className="appearance-none outline-none w-full py-3 font-semibold placeholder:font-normal placeholder:text-[#838C9D] !bg-transparent"
+              className="appearance-none outline-none w-full py-3 font-semibold placeholder:font-normal placeholder:text-[#6a6a6a] !bg-transparent"
               placeholder="Write your name"
             />
           </div>
         </div>
-        <span className="error-message text-[#FF435A]">
+        <span className="error-message text-[#ef4444]">
           {errors?.name?.message}
         </span>
         <div className="flex flex-col gap-[10px]">
           <label for="email" className="font-semibold">
             Email Address
           </label>
-          <div className="flex items-center w-full rounded-full border border-[#CFDBEF] gap-3 px-5 transition-all duration-300 focus-within:ring-2 focus-within:ring-[#662FFF]">
+          <div className="flex items-center w-full rounded-full border border-[#e5e5e5] gap-3 px-5 transition-all duration-300 focus-within:ring-2 focus-within:ring-[#0a0a0a]">
             <img
               src="/assets/images/icons/sms-black.svg"
               className="w-6 h-6"
@@ -188,19 +188,19 @@ export default function ManageCreateStudentPage() {
               {...register("email")}
               type="email"
               id="email"
-              className="appearance-none outline-none w-full py-3 font-semibold placeholder:font-normal placeholder:text-[#838C9D] !bg-transparent"
+              className="appearance-none outline-none w-full py-3 font-semibold placeholder:font-normal placeholder:text-[#6a6a6a] !bg-transparent"
               placeholder="Write your email address"
             />
           </div>
         </div>
-        <span className="error-message text-[#FF435A]">
+        <span className="error-message text-[#ef4444]">
           {errors?.email?.message}
         </span>
         <div className="flex flex-col gap-[10px]">
           <label for="password" className="font-semibold">
             Password
           </label>
-          <div className="flex items-center w-full rounded-full border border-[#CFDBEF] gap-3 px-5 transition-all duration-300 focus-within:ring-2 focus-within:ring-[#662FFF]">
+          <div className="flex items-center w-full rounded-full border border-[#e5e5e5] gap-3 px-5 transition-all duration-300 focus-within:ring-2 focus-within:ring-[#0a0a0a]">
             <img
               src="/assets/images/icons/lock-black.svg"
               className="w-6 h-6"
@@ -210,25 +210,25 @@ export default function ManageCreateStudentPage() {
               {...register("password")}
               type="password"
               id="password"
-              className="appearance-none outline-none w-full py-3 font-semibold placeholder:font-normal placeholder:text-[#838C9D] !bg-transparent"
+              className="appearance-none outline-none w-full py-3 font-semibold placeholder:font-normal placeholder:text-[#6a6a6a] !bg-transparent"
               placeholder="Type password"
             />
           </div>
         </div>
-        <span className="error-message text-[#FF435A]">
+        <span className="error-message text-[#ef4444]">
           {errors?.password?.message}
         </span>
         <div className="flex items-center gap-[14px]">
           <button
             type="button"
-            className="w-full rounded-full border border-[#060A23] p-[14px_20px] font-semibold text-nowrap"
+            className="w-full rounded-full border border-[#0a0a0a] p-[14px_20px] font-semibold text-nowrap"
           >
             Save as Draft
           </button>
           <button
             type="submit"
             disabled={student === undefined ? mutateCreate.isPending : mutateUpdate.isPending}
-            className="w-full rounded-full p-[14px_20px] font-semibold text-[#FFFFFF] bg-[#662FFF] text-nowrap hover:bg-[#5528CC] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
+            className="w-full rounded-full p-[14px_20px] font-semibold text-[#FFFFFF] bg-[#0a0a0a] text-nowrap hover:bg-[#1f1f1f] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
           >
             {student === undefined ? (mutateCreate.isPending ? "Adding..." : "Add Now") : (mutateUpdate.isPending ? "Updating..." : "Update Now")}
           </button>

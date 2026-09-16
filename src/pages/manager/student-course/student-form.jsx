@@ -51,12 +51,12 @@ export default function ManageCreateCoursePage() {
           <h1 className="font-extrabold text-[28px] leading-[42px]">
             Add Student
           </h1>
-          <p className="text-[#838C9D] mt-[1]">Create new future for company</p>
+          <p className="text-[#6a6a6a] mt-[1]">Create new future for company</p>
         </div>
         <div className="flex items-center gap-3">
           <a
             href="#"
-            className="w-fit rounded-full border border-[#060A23] p-[14px_20px] font-semibold text-nowrap"
+            className="w-fit rounded-full border border-[#0a0a0a] p-[14px_20px] font-semibold text-nowrap"
           >
             Import from BWA
           </a>
@@ -64,13 +64,13 @@ export default function ManageCreateCoursePage() {
       </header>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="flex flex-col w-[550px] rounded-[30px] p-[30px] gap-[30px] bg-[#F8FAFB]"
+        className="flex flex-col w-[550px] rounded-[30px] p-[30px] gap-[30px] bg-[#fffaf0]"
       >
         <div className="flex flex-col gap-[10px]">
           <label htmlFor="studentId" className="font-semibold">
             Select Student
           </label>
-          <div className="flex items-center w-full rounded-full border border-[#CFDBEF] gap-3 px-5 transition-all duration-300 focus-within:ring-2 focus-within:ring-[#662FFF]">
+          <div className="flex items-center w-full rounded-full border border-[#e5e5e5] gap-3 px-5 transition-all duration-300 focus-within:ring-2 focus-within:ring-[#0a0a0a]">
             <img
               src="/assets/images/icons/bill-black.svg"
               className="w-6 h-6"
@@ -79,7 +79,7 @@ export default function ManageCreateCoursePage() {
             <select
               {...register("studentId")}
               id="studentId"
-              className="appearance-none outline-none w-full py-3 px-2 -mx-2 font-semibold placeholder:font-normal placeholder:text-[#838C9D] !bg-transparent"
+              className="appearance-none outline-none w-full py-3 px-2 -mx-2 font-semibold placeholder:font-normal placeholder:text-[#6a6a6a] !bg-transparent"
             >
               <option value="" hidden>
                 Choose one student
@@ -96,7 +96,7 @@ export default function ManageCreateCoursePage() {
               alt="icon"
             />
           </div>
-          <span className="error-message text-[#FF435A]">
+          <span className="error-message text-[#ef4444]">
             {errors?.studentId?.message}
           </span>
         </div>
@@ -104,14 +104,14 @@ export default function ManageCreateCoursePage() {
         <div className="flex items-center gap-[14px]">
           <button
             type="button"
-            className="w-full rounded-full border border-[#060A23] p-[14px_20px] font-semibold text-nowrap"
+            className="w-full rounded-full border border-[#0a0a0a] p-[14px_20px] font-semibold text-nowrap"
           >
             Save as Draft
           </button>
           <button
             type="submit"
             disabled={isLoading}
-            className="w-full rounded-full p-[14px_20px] font-semibold text-[#FFFFFF] bg-[#662FFF] text-nowrap"
+            className="w-full rounded-full p-[14px_20px] font-semibold text-[#FFFFFF] bg-[#0a0a0a] text-nowrap"
           >
             Add Now
           </button>

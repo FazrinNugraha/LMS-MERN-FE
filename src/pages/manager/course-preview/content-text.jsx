@@ -12,7 +12,7 @@ export default function ContentText({ content, handleNext }) {
       <div className="fixed bottom-0 w-[calc(100%-400px)] h-[151px] flex items-end justify-end pb-5 bg-[linear-gradient(0deg,#FFFFFF_49.67%,rgba(255,255,255,0)_84.11%)]">
         <button
           onClick={() => handleNext(content)}
-          type="button" className="w-fit rounded-full p-[14px_20px] font-semibold text-[#FFFFFF] bg-[#662FFF] text-nowrap hover:-translate-y-1 hover:shadow-lg hover:bg-white-600 active:translate-y-0.5">
+          type="button" className="w-fit rounded-full p-[14px_20px] font-semibold text-[#FFFFFF] bg-[#0a0a0a] text-nowrap hover:-translate-y-1 hover:shadow-lg hover:bg-white-600 active:translate-y-0.5">
           Next Course
         </button>
       </div>

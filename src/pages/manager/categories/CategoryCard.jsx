@@ -34,9 +34,9 @@ export default function CategoryCard({ id, name, totalCourses, onEdit }) {
 
   return (
     <>
-      <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 p-5 rounded-[20px] border border-[#CFDBEF] bg-white hover:shadow-lg transition-all duration-300">
+      <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 p-5 rounded-[20px] border border-[#e5e5e5] bg-white hover:shadow-lg transition-all duration-300">
         <div className="flex items-center gap-4 flex-1">
-          <div className="flex shrink-0 w-14 h-14 rounded-full bg-[#F8FAFB] items-center justify-center">
+          <div className="flex shrink-0 w-14 h-14 rounded-full bg-[#fffaf0] items-center justify-center">
             <img
               src="/assets/images/icons/crown-purple.svg"
               className="w-7 h-7"
@@ -45,7 +45,7 @@ export default function CategoryCard({ id, name, totalCourses, onEdit }) {
           </div>
 
           <div className="flex-1">
-            <h3 className="font-bold text-lg leading-[27px] text-[#060A23]">
+            <h3 className="font-bold text-lg leading-[27px] text-[#0a0a0a]">
               {name}
             </h3>
             <div className="flex items-center gap-2 mt-1">
@@ -54,7 +54,7 @@ export default function CategoryCard({ id, name, totalCourses, onEdit }) {
                 className="w-4 h-4"
                 alt="icon"
               />
-              <p className="text-[#838C9D] text-sm">
+              <p className="text-[#6a6a6a] text-sm">
                 {totalCourses} {totalCourses === 1 ? "Course" : "Courses"}
               </p>
             </div>
@@ -65,7 +65,7 @@ export default function CategoryCard({ id, name, totalCourses, onEdit }) {
           <button
             type="button"
             onClick={onEdit}
-            className="flex-1 md:flex-none rounded-full border border-[#060A23] px-5 py-3 font-semibold text-sm hover:bg-[#F8FAFB] transition-all duration-300"
+            className="flex-1 md:flex-none rounded-full border border-[#0a0a0a] px-5 py-3 font-semibold text-sm hover:bg-[#fffaf0] transition-all duration-300"
           >
             Edit
           </button>

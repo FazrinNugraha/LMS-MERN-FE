@@ -15,7 +15,7 @@ export default function ManageCoursePage() {
           <h1 className="font-extrabold text-xl md:text-[28px] leading-[32px] md:leading-[42px]">
             Manage Courses
           </h1>
-          <p className="text-[#838C9D] mt-1 text-sm md:text-base">
+          <p className="text-[#6a6a6a] mt-1 text-sm md:text-base">
             Give the best future for your great employees
           </p>
         </div>
@@ -23,14 +23,14 @@ export default function ManageCoursePage() {
         <div className="flex flex-wrap items-center gap-2 md:gap-3 w-full md:w-auto">
           <Link
             to="#"
-            className="flex-1 md:flex-none rounded-full border border-[#060A23] p-[12px_16px] md:p-[14px_20px] font-semibold text-sm md:text-base text-center md:text-nowrap hover:bg-[#F8FAFB] transition-all duration-300"
+            className="flex-1 md:flex-none rounded-full border border-[#0a0a0a] p-[12px_16px] md:p-[14px_20px] font-semibold text-sm md:text-base text-center md:text-nowrap hover:bg-[#fffaf0] transition-all duration-300"
           >
             Import File
           </Link>
 
           <Link
             to="/manager/courses/create"
-            className="flex-1 md:flex-none rounded-full p-[12px_16px] md:p-[14px_20px] font-semibold text-sm md:text-base text-[#FFFFFF] bg-[#662FFF] text-center md:text-nowrap hover:bg-[#5528CC] transition-all duration-300 shadow-lg hover:shadow-xl"
+            className="flex-1 md:flex-none rounded-full p-[12px_16px] md:p-[14px_20px] font-semibold text-sm md:text-base text-[#FFFFFF] bg-[#0a0a0a] text-center md:text-nowrap hover:bg-[#1f1f1f] transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             New Course
           </Link>
@@ -39,7 +39,7 @@ export default function ManageCoursePage() {
 
       <section
         id="CourseList"
-        className="flex flex-col w-full rounded-[30px] p-[20px] md:p-[30px] gap-[15px] md:gap-[30px] bg-[#F8FAFB]"
+        className="flex flex-col w-full rounded-[30px] p-[20px] md:p-[30px] gap-[15px] md:gap-[30px] bg-[#fffaf0]"
       >
         {isLoading ? (
           <>
