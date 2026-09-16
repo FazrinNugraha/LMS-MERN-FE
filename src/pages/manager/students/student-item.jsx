@@ -53,7 +53,7 @@ export default function StudentsItem({ imageUrl, name, TotalCourse, id }) {
       <div className="flex justify-end items-center gap-3">
         <Link
           to={`/manager/students/edit/${id}`}
-          className="w-fit rounded-full border border-[#0a0a0a] p-[14px_20px] font-semibold text-nowrap"
+          className="w-fit rounded-full border border-[#e5e5e5] p-[14px_20px] font-semibold text-nowrap"
         >
           Edit Profile
         </Link>

@@ -35,13 +35,13 @@ export default function SignUpPage() {
           <Logo variant="dark" />
           <div className="flex flex-wrap items-center gap-2 md:gap-3 w-full md:w-auto">
             <Link to="/">
-              <div className="flex-1 md:flex-none flex items-center justify-center gap-3 w-full md:w-fit rounded-full border-2 border-[#0a0a0a] p-[12px_20px] md:p-[14px_24px] transition-all duration-300 hover:bg-[#0a0a0a] hover:shadow-lg bg-white group">
-                <span className="font-semibold text-[#0a0a0a] group-hover:text-white transition-colors text-sm md:text-base">Home</span>
+              <div className="flex-1 md:flex-none flex items-center justify-center gap-3 w-full md:w-fit rounded-full border-2 border-[#e5e5e5] p-[12px_20px] md:p-[14px_24px] transition-all duration-300 hover:bg-[#ffb084] hover:shadow-lg bg-white group">
+                <span className="font-semibold text-[#1a3a3a] group-hover:text-white transition-colors text-sm md:text-base">Home</span>
               </div>
             </Link>
             <Link to="/manager/sign-in">
-              <div className="flex-1 md:flex-none flex items-center justify-center gap-3 w-full md:w-fit rounded-full border-2 border-[#0a0a0a] p-[12px_20px] md:p-[14px_24px] transition-all duration-300 hover:bg-[#0a0a0a] hover:shadow-lg bg-white group">
-                <span className="font-semibold text-[#0a0a0a] group-hover:text-white transition-colors text-sm md:text-base">Sign In</span>
+              <div className="flex-1 md:flex-none flex items-center justify-center gap-3 w-full md:w-fit rounded-full border-2 border-[#e5e5e5] p-[12px_20px] md:p-[14px_24px] transition-all duration-300 hover:bg-[#ffb084] hover:shadow-lg bg-white group">
+                <span className="font-semibold text-[#1a3a3a] group-hover:text-white transition-colors text-sm md:text-base">Sign In</span>
               </div>
             </Link>
           </div>
@@ -67,7 +67,7 @@ export default function SignUpPage() {
               <label htmlFor="name" className="text-sm font-medium text-gray-700">
                 Full Name
               </label>
-              <div className="flex items-center gap-3 w-full rounded-xl border-2 p-[12px_16px] md:p-[14px_20px] transition-all duration-300 focus-within:border-[#0a0a0a] focus-within:shadow-md bg-gray-50 border-gray-200">
+              <div className="flex items-center gap-3 w-full rounded-xl border-2 p-[12px_16px] md:p-[14px_20px] transition-all duration-300 focus-within:border-[#e5e5e5] focus-within:shadow-md bg-gray-50 border-gray-200">
                 <img
                   src="/assets/images/icons/user-octagon-white.svg"
                   className="w-5 h-5 md:w-6 md:h-6 flex shrink-0 opacity-60"
@@ -97,7 +97,7 @@ export default function SignUpPage() {
               <label htmlFor="email" className="text-sm font-medium text-gray-700">
                 Email Address
               </label>
-              <div className="flex items-center gap-3 w-full rounded-xl border-2 p-[12px_16px] md:p-[14px_20px] transition-all duration-300 focus-within:border-[#0a0a0a] focus-within:shadow-md bg-gray-50 border-gray-200">
+              <div className="flex items-center gap-3 w-full rounded-xl border-2 p-[12px_16px] md:p-[14px_20px] transition-all duration-300 focus-within:border-[#e5e5e5] focus-within:shadow-md bg-gray-50 border-gray-200">
                 <img
                   src="/assets/images/icons/sms-white.svg"
                   className="w-5 h-5 md:w-6 md:h-6 flex shrink-0 opacity-60"
@@ -127,7 +127,7 @@ export default function SignUpPage() {
               <label htmlFor="password" className="text-sm font-medium text-gray-700">
                 Password
               </label>
-              <div className="flex items-center gap-3 w-full rounded-xl border-2 p-[12px_16px] md:p-[14px_20px] transition-all duration-300 focus-within:border-[#0a0a0a] focus-within:shadow-md bg-gray-50 border-gray-200">
+              <div className="flex items-center gap-3 w-full rounded-xl border-2 p-[12px_16px] md:p-[14px_20px] transition-all duration-300 focus-within:border-[#e5e5e5] focus-within:shadow-md bg-gray-50 border-gray-200">
                 <img
                   src="/assets/images/icons/key-white.svg"
                   className="w-5 h-5 md:w-6 md:h-6 flex shrink-0 opacity-60"
@@ -156,7 +156,7 @@ export default function SignUpPage() {
 
             <button
               type="submit"
-              className="w-full rounded-xl border-2 border-[#0a0a0a] p-[14px_20px] md:p-[16px_24px] text-center font-semibold text-white text-sm md:text-base bg-gradient-to-r from-[#0a0a0a] to-[#0a0a0a] hover:from-[#1f1f1f] hover:to-[#0a0a0a] transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="w-full rounded-xl border-2 border-[#e5e5e5] p-[14px_20px] md:p-[16px_24px] text-center font-semibold text-white text-sm md:text-base bg-gradient-to-r from-[#ff6b5a] to-[#ff6b5a] hover:from-[#e85a49] hover:to-[#ff6b5a] transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               Sign Up Now
             </button>
@@ -165,7 +165,7 @@ export default function SignUpPage() {
               Already have an account?{" "}
               <Link
                 to="/manager/sign-in"
-                className="text-[#0a0a0a] hover:text-[#0a0a0a] font-semibold hover:underline transition-colors"
+                className="text-[#1a3a3a] hover:text-[#e85a49] font-semibold hover:underline transition-colors"
               >
                 Sign In
               </Link>

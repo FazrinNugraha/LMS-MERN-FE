@@ -83,7 +83,7 @@ export default function ManageCreateCoursePage() {
         <div className="flex items-center gap-3">
           <a
             href="#"
-            className="w-fit rounded-full border border-[#0a0a0a] p-[14px_20px] font-semibold text-nowrap"
+            className="w-fit rounded-full border border-[#e5e5e5] p-[14px_20px] font-semibold text-nowrap"
           >
             Import from BWA
           </a>
@@ -99,7 +99,7 @@ export default function ManageCreateCoursePage() {
             <label htmlFor="title" className="font-semibold">
               Course Name
             </label>
-            <div className="flex items-center w-full rounded-full border border-[#e5e5e5] gap-3 px-5 transition-all duration-300 focus-within:ring-2 focus-within:ring-[#0a0a0a]">
+            <div className="flex items-center w-full rounded-full border border-[#e5e5e5] gap-3 px-5 transition-all duration-300 focus-within:ring-2 focus-within:ring-[#ffb084]">
               <img
                 src="/assets/images/icons/note-favorite-black.svg"
                 className="w-6 h-6"
@@ -122,7 +122,7 @@ export default function ManageCreateCoursePage() {
             <label htmlFor="tagline" className="font-semibold">
               Course Tagline
             </label>
-            <div className="flex items-center w-full rounded-full border border-[#e5e5e5] gap-3 px-5 transition-all duration-300 focus-within:ring-2 focus-within:ring-[#0a0a0a]">
+            <div className="flex items-center w-full rounded-full border border-[#e5e5e5] gap-3 px-5 transition-all duration-300 focus-within:ring-2 focus-within:ring-[#ffb084]">
               <img
                 src="/assets/images/icons/bill-black.svg"
                 className="w-6 h-6"
@@ -210,7 +210,7 @@ export default function ManageCreateCoursePage() {
             <label htmlFor="category" className="font-semibold">
               Select Category
             </label>
-            <div className="flex items-center w-full rounded-full border border-[#e5e5e5] gap-3 px-5 transition-all duration-300 focus-within:ring-2 focus-within:ring-[#0a0a0a]">
+            <div className="flex items-center w-full rounded-full border border-[#e5e5e5] gap-3 px-5 transition-all duration-300 focus-within:ring-2 focus-within:ring-[#ffb084]">
               <img
                 src="/assets/images/icons/bill-black.svg"
                 className="w-6 h-6"
@@ -247,7 +247,7 @@ export default function ManageCreateCoursePage() {
           <label htmlFor="desc" className="font-semibold">
             Description
           </label>
-          <div className="flex w-full rounded-[20px] border border-[#e5e5e5] gap-3 p-5  transition-all duration-300 focus-within:ring-2 focus-within:ring-[#0a0a0a] ring-2 ring-[#ef4444]">
+          <div className="flex w-full rounded-[20px] border border-[#e5e5e5] gap-3 p-5  transition-all duration-300 focus-within:ring-2 focus-within:ring-[#ffb084] ring-2 ring-[#ef4444]">
             <img
               src="/assets/images/icons/note-black.png"
               className="w-6 h-6"
@@ -270,14 +270,14 @@ export default function ManageCreateCoursePage() {
         <div className="flex items-center gap-[14px]">
           <button
             type="button"
-            className="w-full rounded-full border border-[#0a0a0a] p-[14px_20px] font-semibold text-nowrap"
+            className="w-full rounded-full border border-[#e5e5e5] p-[14px_20px] font-semibold text-nowrap"
           >
             Save as Draft
           </button>
           <button
             type="submit"
             disabled={data?.course ? mutateUpdate.isPending : mutateCreate.isPending}
-            className="w-full rounded-full p-[14px_20px] font-semibold text-[#FFFFFF] bg-[#0a0a0a] text-nowrap hover:bg-[#1f1f1f] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
+            className="w-full rounded-full p-[14px_20px] font-semibold text-[#FFFFFF] bg-[#ff6b5a] text-nowrap hover:bg-[#e85a49] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
           >
             {data?.course ? (mutateUpdate.isPending ? "Updating..." : "Update Now") : (mutateCreate.isPending ? "Creating..." : "Create Now")}
           </button>

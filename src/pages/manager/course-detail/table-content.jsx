@@ -14,7 +14,7 @@ export default function TableContent({ details, courseId }) {
         <h2 className="font-bold text-[22px] leading-[33px]">Course Content</h2>
         <Link
           to={`/manager/courses/${courseId}/create`}
-          className="w-fit rounded-full p-[14px_20px] font-semibold text-[#FFFFFF] bg-[#0a0a0a] text-nowrap  hover:-translate-y-1 hover:shadow-lg hover:bg-white-600
+          className="w-fit rounded-full p-[14px_20px] font-semibold text-[#FFFFFF] bg-[#ff6b5a] text-nowrap  hover:-translate-y-1 hover:shadow-lg hover:bg-white-600
               active:translate-y-0.5"
         >
           Add Content
@@ -32,19 +32,19 @@ export default function TableContent({ details, courseId }) {
         />
       ))}
       {/* <div id="Pagination" className="flex items-center gap-3">
-                    <button type="button" className="flex shrink-0 w-9 h-9 rounded-full items-center justify-center text-center transition-all duration-300 hover:bg-[#0a0a0a] hover:text-white hover:border-0 bg-[#0a0a0a] text-white">
+                    <button type="button" className="flex shrink-0 w-9 h-9 rounded-full items-center justify-center text-center transition-all duration-300 hover:bg-[#ffb084] hover:text-white hover:border-0 bg-[#ff6b5a] text-white">
                         <span className="font-semibold text-sm leading-[21px]">1</span>
                     </button>
-                    <button type="button" className="flex shrink-0 w-9 h-9 rounded-full items-center justify-center text-center transition-all duration-300 hover:bg-[#0a0a0a] hover:text-white hover:border-0 border border-[#0a0a0a]">
+                    <button type="button" className="flex shrink-0 w-9 h-9 rounded-full items-center justify-center text-center transition-all duration-300 hover:bg-[#ffb084] hover:text-white hover:border-0 border border-[#e5e5e5]">
                         <span className="font-semibold text-sm leading-[21px]">2</span>
                     </button>
-                    <button type="button" className="flex shrink-0 w-9 h-9 rounded-full items-center justify-center text-center transition-all duration-300 hover:bg-[#0a0a0a] hover:text-white hover:border-0 border border-[#0a0a0a]">
+                    <button type="button" className="flex shrink-0 w-9 h-9 rounded-full items-center justify-center text-center transition-all duration-300 hover:bg-[#ffb084] hover:text-white hover:border-0 border border-[#e5e5e5]">
                         <span className="font-semibold text-sm leading-[21px]">3</span>
                     </button>
-                    <button type="button" className="flex shrink-0 w-9 h-9 rounded-full items-center justify-center text-center transition-all duration-300 hover:bg-[#0a0a0a] hover:text-white hover:border-0 border border-[#0a0a0a]">
+                    <button type="button" className="flex shrink-0 w-9 h-9 rounded-full items-center justify-center text-center transition-all duration-300 hover:bg-[#ffb084] hover:text-white hover:border-0 border border-[#e5e5e5]">
                         <span className="font-semibold text-sm leading-[21px]">4</span>
                     </button>
-                    <button type="button" className="flex shrink-0 w-9 h-9 rounded-full items-center justify-center text-center transition-all duration-300 hover:bg-[#0a0a0a] hover:text-white hover:border-0 border border-[#0a0a0a]">
+                    <button type="button" className="flex shrink-0 w-9 h-9 rounded-full items-center justify-center text-center transition-all duration-300 hover:bg-[#ffb084] hover:text-white hover:border-0 border border-[#e5e5e5]">
                         <span className="font-semibold text-sm leading-[21px]">5</span>
                     </button>
                 </div> */}

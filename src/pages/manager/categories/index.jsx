@@ -47,7 +47,7 @@ export default function ManageCategoriesPage() {
         <div className="flex flex-wrap items-center gap-2 md:gap-3 w-full md:w-auto">
           <button
             onClick={handleCreate}
-            className="flex-1 md:flex-none rounded-full p-[12px_16px] md:p-[14px_20px] font-semibold text-sm md:text-base text-[#FFFFFF] bg-[#0a0a0a] text-center md:text-nowrap hover:bg-[#1f1f1f] transition-all duration-300 shadow-lg hover:shadow-xl"
+            className="flex-1 md:flex-none rounded-full p-[12px_16px] md:p-[14px_20px] font-semibold text-sm md:text-base text-[#FFFFFF] bg-[#ff6b5a] text-center md:text-nowrap hover:bg-[#e85a49] transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             New Category
           </button>

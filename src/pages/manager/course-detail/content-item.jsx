@@ -27,7 +27,7 @@ export default function ContentItem({ id, index, type, title, coursesId }) {
   return (
     <div className="card flex items-center gap-5">
       <div className="relative flex shrink-0 w-35 h-27.5 ">
-        <p className="absolute -top-2.5 -left-[10px] flex shrink-0 w-[30px] h-[30px] rounded-full items-center justify-center text-center bg-[#0a0a0a] text-white">
+        <p className="absolute -top-2.5 -left-[10px] flex shrink-0 w-[30px] h-[30px] rounded-full items-center justify-center text-center bg-[#ff6b5a] text-white">
           <span className="font-bold text-sm leading-5.25">{index}</span>
         </p>
         <div className="rounded-[20px] bg-[#D9D9D9] overflow-hidden">
@@ -56,7 +56,7 @@ export default function ContentItem({ id, index, type, title, coursesId }) {
       <div className="flex justify-end items-center gap-3">
         <Link
           to={`/manager/courses/${coursesId}/edit/${id}`}
-          className="w-fit rounded-full border border-[#0a0a0a] p-[14px_20px] font-semibold text-nowrap  hover:-translate-y-1 hover:shadow-lg hover:bg-white-600
+          className="w-fit rounded-full border border-[#e5e5e5] p-[14px_20px] font-semibold text-nowrap  hover:-translate-y-1 hover:shadow-lg hover:bg-white-600
               active:translate-y-0.5"
         >
           Edit Content

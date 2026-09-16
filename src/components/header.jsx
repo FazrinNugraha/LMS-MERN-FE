@@ -36,9 +36,9 @@ export default function Header({type = "manager"}) {
   const getAvatarStyle = () => {
     if (type === "manager") {
       return {
-        bgColor: "#0a0a0a", // primary ink
+        bgColor: "#ff6b5a", // coral primary
         textColor: "#FFFFFF",
-        ringColor: "#1f1f1f"
+        ringColor: "#ffb084"
       };
     } else {
       return {

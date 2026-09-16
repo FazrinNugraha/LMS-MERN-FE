@@ -81,14 +81,14 @@ export default function CategoryFormModal({ isOpen, onClose, category = null }) 
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
       {/* Backdrop */}
       <div
-        className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+        className="absolute inset-0 bg-[#1a3a3a]/40 backdrop-blur-sm"
         onClick={onClose}
       />
 
       {/* Modal */}
       <div className="relative bg-white rounded-[20px] p-6 md:p-8 max-w-md w-full shadow-2xl animate-[slideUp_0.3s_ease-out]">
         <div className="flex items-center justify-between mb-6">
-          <h2 className="font-bold text-xl md:text-2xl text-[#0a0a0a]">
+          <h2 className="font-bold text-xl md:text-2xl text-[#1a3a3a]">
             {isEdit ? "Edit Category" : "New Category"}
           </h2>
           <button
@@ -107,7 +107,7 @@ export default function CategoryFormModal({ isOpen, onClose, category = null }) 
             <div
               className={`flex items-center w-full rounded-full border ${
                 errors.name ? "border-red-400" : "border-[#e5e5e5]"
-              } gap-3 px-5 transition-all duration-300 focus-within:ring-2 focus-within:ring-[#0a0a0a]`}
+              } gap-3 px-5 transition-all duration-300 focus-within:ring-2 focus-within:ring-[#ffb084]`}
             >
               <img
                 src="/assets/images/icons/crown-purple.svg"
@@ -143,7 +143,7 @@ export default function CategoryFormModal({ isOpen, onClose, category = null }) 
             <button
               type="submit"
               disabled={isPending}
-              className="flex-1 rounded-full py-3 font-semibold text-sm text-white bg-[#0a0a0a] hover:bg-[#1f1f1f] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
+              className="flex-1 rounded-full py-3 font-semibold text-sm text-white bg-[#ff6b5a] hover:bg-[#e85a49] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
             >
               {isPending
                 ? isEdit

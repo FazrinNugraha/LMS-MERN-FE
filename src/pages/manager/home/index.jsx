@@ -23,13 +23,13 @@ export default function ManagerHomePage() {
         <div className="flex flex-wrap items-center gap-2 md:gap-3 w-full md:w-auto">
           <a
             href="#"
-            className="flex-1 md:flex-none rounded-full border border-[#0a0a0a] p-[12px_16px] md:p-[14px_20px] font-semibold text-sm md:text-base text-center md:text-nowrap hover:bg-[#fffaf0] transition-all duration-300"
+            className="flex-1 md:flex-none rounded-full border border-[#e5e5e5] p-[12px_16px] md:p-[14px_20px] font-semibold text-sm md:text-base text-center md:text-nowrap hover:bg-[#fffaf0] transition-all duration-300"
           >
             Customize
           </a>
           <a
             href="#"
-            className="flex-1 md:flex-none rounded-full p-[12px_16px] md:p-[14px_20px] font-semibold text-sm md:text-base text-[#FFFFFF] bg-[#0a0a0a] text-center md:text-nowrap hover:bg-[#1f1f1f] transition-all duration-300 shadow-lg hover:shadow-xl"
+            className="flex-1 md:flex-none rounded-full p-[12px_16px] md:p-[14px_20px] font-semibold text-sm md:text-base text-[#FFFFFF] bg-[#ff6b5a] text-center md:text-nowrap hover:bg-[#e85a49] transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             Export Data
           </a>
@@ -117,7 +117,7 @@ export default function ManagerHomePage() {
             <div
               className="absolute rounded-full w-[180px] h-[180px] md:w-[230px] md:h-[230px] z-10"
               style={{
-                background: "conic-gradient(#C2ACFF 0% 25%, #0a0a0a 25% 100%)",
+                background: "conic-gradient(#a4d4c5 0% 25%, #ffb084 25% 100%)",
               }}
             ></div>
             <div className="flex justify-center items-center w-[100px] h-[100px] md:w-[130px] md:h-[130px] rounded-full bg-white z-10">
@@ -130,13 +130,13 @@ export default function ManagerHomePage() {
           </div>
           <div className="flex flex-col gap-[10px]">
             <div className="flex items-center gap-3">
-              <div className="w-4 h-4 md:w-5 md:h-5 rounded-full bg-[#0a0a0a]"></div>
+              <div className="w-4 h-4 md:w-5 md:h-5 rounded-full bg-[#ff6b5a]"></div>
               <p className="font-semibold text-xs md:text-sm leading-[18px] md:leading-[21px]">
                 Completed 75%
               </p>
             </div>
             <div className="flex items-center gap-3">
-              <div className="w-4 h-4 md:w-5 md:h-5 rounded-full bg-[#C2ACFF]"></div>
+              <div className="w-4 h-4 md:w-5 md:h-5 rounded-full bg-[#a4d4c5]"></div>
               <p className="font-semibold text-xs md:text-sm leading-[18px] md:leading-[21px]">
                 Not Completed 25%
               </p>

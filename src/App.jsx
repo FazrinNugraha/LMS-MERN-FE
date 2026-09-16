@@ -13,14 +13,14 @@ function App() {
         toastOptions={{
           duration: 3000,
           style: {
-            background: '#0a0a0a',
+            background: '#1a3a3a',
             color: '#fff',
             borderRadius: '12px',
             padding: '16px',
           },
           success: {
             iconTheme: {
-              primary: '#0a0a0a',
+              primary: '#ff6b5a',
               secondary: '#fff',
             },
           },

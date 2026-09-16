@@ -43,7 +43,7 @@ export default function LandingPage() {
           </div>
 
           {/* Center Top - Main Check Icon */}
-          <div className="absolute top-8 left-1/2 transform -translate-x-1/2 w-20 h-20 md:w-24 md:h-24 bg-gradient-to-br from-[#1a3a3a] to-[#0a1a1a] rounded-[2rem] shadow-2xl flex items-center justify-center animate-pulse-slow">
+          <div className="absolute top-8 left-1/2 transform -translate-x-1/2 w-20 h-20 md:w-24 md:h-24 bg-gradient-to-br from-[#ffb084] to-[#ff6b5a] rounded-[2rem] shadow-2xl flex items-center justify-center animate-pulse-slow">
             <svg className="w-10 h-10 md:w-12 md:h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
             </svg>
@@ -101,9 +101,9 @@ export default function LandingPage() {
         {/* Quick Access Cards */}
         <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
           <Link to="/manager/sign-in">
-            <div className="group bg-white border-2 border-gray-100 hover:border-[#0a0a0a] rounded-2xl p-6 transition-all duration-300 hover:shadow-xl cursor-pointer">
+            <div className="group bg-white border-2 border-gray-100 hover:border-[#ffb084] rounded-2xl p-6 transition-all duration-300 hover:shadow-xl cursor-pointer">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-[#1a3a3a] to-[#0a1a1a] rounded-xl flex items-center justify-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#ffb084] to-[#ff6b5a] rounded-xl flex items-center justify-center">
                   <img
                     src="/assets/images/icons/security-card-white.svg"
                     className="w-6 h-6"
@@ -114,7 +114,7 @@ export default function LandingPage() {
                   <h3 className="font-bold text-lg text-gray-900">Manager Portal</h3>
                   <p className="text-sm text-gray-500">Manage courses </p>
                 </div>
-                <svg className="w-5 h-5 text-gray-400 group-hover:text-[#0a0a0a] transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-gray-400 group-hover:text-[#e85a49] transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </div>

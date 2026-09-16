@@ -45,7 +45,7 @@ export default function CategoryCard({ id, name, totalCourses, onEdit }) {
           </div>
 
           <div className="flex-1">
-            <h3 className="font-bold text-lg leading-[27px] text-[#0a0a0a]">
+            <h3 className="font-bold text-lg leading-[27px] text-[#1a3a3a]">
               {name}
             </h3>
             <div className="flex items-center gap-2 mt-1">
@@ -65,7 +65,7 @@ export default function CategoryCard({ id, name, totalCourses, onEdit }) {
           <button
             type="button"
             onClick={onEdit}
-            className="flex-1 md:flex-none rounded-full border border-[#0a0a0a] px-5 py-3 font-semibold text-sm hover:bg-[#fffaf0] transition-all duration-300"
+            className="flex-1 md:flex-none rounded-full border border-[#e5e5e5] px-5 py-3 font-semibold text-sm hover:bg-[#fffaf0] transition-all duration-300"
           >
             Edit
           </button>

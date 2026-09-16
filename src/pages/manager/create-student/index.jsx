@@ -85,7 +85,7 @@ export default function ManageCreateStudentPage() {
         <div className="flex items-center gap-3">
           <Link
             to="#"
-            clLinkssName="w-fit rounded-full border border-[#0a0a0a] p-[14px_20px] font-semibold text-nowrap"
+            clLinkssName="w-fit rounded-full border border-[#e5e5e5] p-[14px_20px] font-semibold text-nowrap"
           >
             Import from BWA
           </Link>
@@ -156,7 +156,7 @@ export default function ManageCreateStudentPage() {
           <label for="name" className="font-semibold">
             Full Name
           </label>
-          <div className="flex items-center w-full rounded-full border border-[#e5e5e5] gap-3 px-5 transition-all duration-300 focus-within:ring-2 focus-within:ring-[#0a0a0a]">
+          <div className="flex items-center w-full rounded-full border border-[#e5e5e5] gap-3 px-5 transition-all duration-300 focus-within:ring-2 focus-within:ring-[#ffb084]">
             <img
               src="/assets/images/icons/note-favorite-black.svg"
               className="w-6 h-6"
@@ -178,7 +178,7 @@ export default function ManageCreateStudentPage() {
           <label for="email" className="font-semibold">
             Email Address
           </label>
-          <div className="flex items-center w-full rounded-full border border-[#e5e5e5] gap-3 px-5 transition-all duration-300 focus-within:ring-2 focus-within:ring-[#0a0a0a]">
+          <div className="flex items-center w-full rounded-full border border-[#e5e5e5] gap-3 px-5 transition-all duration-300 focus-within:ring-2 focus-within:ring-[#ffb084]">
             <img
               src="/assets/images/icons/sms-black.svg"
               className="w-6 h-6"
@@ -200,7 +200,7 @@ export default function ManageCreateStudentPage() {
           <label for="password" className="font-semibold">
             Password
           </label>
-          <div className="flex items-center w-full rounded-full border border-[#e5e5e5] gap-3 px-5 transition-all duration-300 focus-within:ring-2 focus-within:ring-[#0a0a0a]">
+          <div className="flex items-center w-full rounded-full border border-[#e5e5e5] gap-3 px-5 transition-all duration-300 focus-within:ring-2 focus-within:ring-[#ffb084]">
             <img
               src="/assets/images/icons/lock-black.svg"
               className="w-6 h-6"
@@ -221,14 +221,14 @@ export default function ManageCreateStudentPage() {
         <div className="flex items-center gap-[14px]">
           <button
             type="button"
-            className="w-full rounded-full border border-[#0a0a0a] p-[14px_20px] font-semibold text-nowrap"
+            className="w-full rounded-full border border-[#e5e5e5] p-[14px_20px] font-semibold text-nowrap"
           >
             Save as Draft
           </button>
           <button
             type="submit"
             disabled={student === undefined ? mutateCreate.isPending : mutateUpdate.isPending}
-            className="w-full rounded-full p-[14px_20px] font-semibold text-[#FFFFFF] bg-[#0a0a0a] text-nowrap hover:bg-[#1f1f1f] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
+            className="w-full rounded-full p-[14px_20px] font-semibold text-[#FFFFFF] bg-[#ff6b5a] text-nowrap hover:bg-[#e85a49] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
           >
             {student === undefined ? (mutateCreate.isPending ? "Adding..." : "Add Now") : (mutateUpdate.isPending ? "Updating..." : "Update Now")}
           </button>

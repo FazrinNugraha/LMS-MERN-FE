@@ -32,14 +32,14 @@ export default function ManageCourseDetailPage() {
         <div className="flex items-center gap-3">
           <Link
             to={`/manager/courses/edit/${id}`}
-            className="w-fit rounded-full border border-[#0a0a0a] p-[14px_20px] font-semibold text-nowrap  hover:-translate-y-1 hover:shadow-lg hover:bg-white-600
+            className="w-fit rounded-full border border-[#e5e5e5] p-[14px_20px] font-semibold text-nowrap  hover:-translate-y-1 hover:shadow-lg hover:bg-white-600
               active:translate-y-0.5"
           >
             Edit Course
           </Link>
           <Link
             to={`/manager/courses/${id}/preview`}
-            className="w-fit rounded-full p-[14px_20px] font-semibold text-[#FFFFFF] bg-[#0a0a0a] text-nowrap hover:-translate-y-1 hover:shadow-lg hover:bg-white-600
+            className="w-fit rounded-full p-[14px_20px] font-semibold text-[#FFFFFF] bg-[#ff6b5a] text-nowrap hover:-translate-y-1 hover:shadow-lg hover:bg-white-600
               active:translate-y-0.5"
           >
             Preview

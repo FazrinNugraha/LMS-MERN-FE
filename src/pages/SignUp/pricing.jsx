@@ -46,14 +46,14 @@ export default function Pricing({data}) {
            <Logo/>
             <div className="flex items-center gap-3">
                 <Link to="/manager/sign-in" >
-                    <div className="flex items-center gap-3 w-fit rounded-full p-[14px_20px] transition-all duration-300 bg-[#0a0a0a] border border-[#0a0a0a] hover:bg-[#1f1f1f]">
+                    <div className="flex items-center gap-3 w-fit rounded-full p-[14px_20px] transition-all duration-300 bg-[#ff6b5a] border border-[#e5e5e5] hover:bg-[#e85a49]">
                         <span className="font-semibold text-white">Sign In</span>
                     </div>
                 </Link>
             </div>
         </nav>
         <header className="flex flex-col items-center gap-5 text-center mt-[50px]">
-            <h1 className="font-extrabold text-[46px] leading-[50px] tracking-[-1px] text-[#0a0a0a]">Best Pricing For Everyone<br/>Who Wants to Grow Business</h1>
+            <h1 className="font-extrabold text-[46px] leading-[50px] tracking-[-1px] text-[#1a3a3a]">Best Pricing For Everyone<br/>Who Wants to Grow Business</h1>
             <p className="text-lg leading-[27px] text-[#6a6a6a]">We delivery robust features to anyone unconditionally.</p>
         </header>
         <div className="flex justify-center max-w-[440px] mx-auto mt-[60px]">
@@ -89,13 +89,13 @@ export default function Pricing({data}) {
                 <hr className="border-[#e5e5e5]"/>
                 <div className="flex flex-col gap-3">
                     <button type='button' onClick={submitData} disabled={isLoading} >
-                        <div className="flex items-center justify-center gap-3 w-full rounded-full border p-[14px_20px] transition-all duration-300 hover:bg-[#0a0a0a] hover:border-[#0a0a0a] hover:shadow-[-10px_-6px_10px_0_#0a0a0a_inset] bg-[#0a0a0a] border-[#0a0a0a] shadow-[-10px_-6px_10px_0_#0a0a0a_inset]">
+                        <div className="flex items-center justify-center gap-3 w-full rounded-full border p-[14px_20px] transition-all duration-300 hover:bg-[#ffb084] hover:border-[#ffb084] hover:shadow-[-10px_-6px_10px_0_#ff6b5a_inset] bg-[#ff6b5a] border-[#e5e5e5] shadow-[-10px_-6px_10px_0_#ff6b5a_inset]">
                             <span className="font-semibold text-white">Choose This Plan</span>
                         </div>
                     </button>
                     <Link to="#" >
                         <div className="flex items-center justify-center gap-3 w-full rounded-full p-[14px_20px] transition-all duration-300 bg-[#fffaf0] border border-[#fffaf0] hover:opacity-90">
-                            <span className="font-semibold text-[#0a0a0a]">Contact Our Sales</span>
+                            <span className="font-semibold text-[#1a3a3a]">Contact Our Sales</span>
                         </div>
                     </Link>  
                 </div>

@@ -23,14 +23,14 @@ export default function ManageCoursePage() {
         <div className="flex flex-wrap items-center gap-2 md:gap-3 w-full md:w-auto">
           <Link
             to="#"
-            className="flex-1 md:flex-none rounded-full border border-[#0a0a0a] p-[12px_16px] md:p-[14px_20px] font-semibold text-sm md:text-base text-center md:text-nowrap hover:bg-[#fffaf0] transition-all duration-300"
+            className="flex-1 md:flex-none rounded-full border border-[#e5e5e5] p-[12px_16px] md:p-[14px_20px] font-semibold text-sm md:text-base text-center md:text-nowrap hover:bg-[#fffaf0] transition-all duration-300"
           >
             Import File
           </Link>
 
           <Link
             to="/manager/courses/create"
-            className="flex-1 md:flex-none rounded-full p-[12px_16px] md:p-[14px_20px] font-semibold text-sm md:text-base text-[#FFFFFF] bg-[#0a0a0a] text-center md:text-nowrap hover:bg-[#1f1f1f] transition-all duration-300 shadow-lg hover:shadow-xl"
+            className="flex-1 md:flex-none rounded-full p-[12px_16px] md:p-[14px_20px] font-semibold text-sm md:text-base text-[#FFFFFF] bg-[#ff6b5a] text-center md:text-nowrap hover:bg-[#e85a49] transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             New Course
           </Link>

@@ -74,13 +74,13 @@ export default function CardCourses({
         <div className="flex justify-end items-center gap-2 md:gap-3 w-full md:w-auto">
           <Link
             to={`/manager/courses/students/${id}`}
-            className="w-full md:w-fit rounded-full border border-[#0a0a0a] p-[12px_16px] md:p-[14px_20px] font-semibold text-sm md:text-base text-center md:text-nowrap hover:bg-[#fffaf0] transition-all duration-300"
+            className="w-full md:w-fit rounded-full border border-[#e5e5e5] p-[12px_16px] md:p-[14px_20px] font-semibold text-sm md:text-base text-center md:text-nowrap hover:bg-[#fffaf0] transition-all duration-300"
           >
             Student
           </Link>
           <Link
             to={`/manager/courses/${id}`}
-            className="w-full md:w-fit rounded-full border border-[#0a0a0a] p-[12px_16px] md:p-[14px_20px] font-semibold text-sm md:text-base text-center md:text-nowrap hover:bg-[#fffaf0] transition-all duration-300"
+            className="w-full md:w-fit rounded-full border border-[#e5e5e5] p-[12px_16px] md:p-[14px_20px] font-semibold text-sm md:text-base text-center md:text-nowrap hover:bg-[#fffaf0] transition-all duration-300"
           >
             Manage
           </Link>

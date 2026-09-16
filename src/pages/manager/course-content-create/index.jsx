@@ -241,7 +241,7 @@ export default function ManageContentCreatePage() {
           <button
             type="submit"
             disabled={content === undefined ? mutateCreateContent.isLoading : mutateUpdateContent.isLoading}
-            className="w-full rounded-full p-[14px_20px] font-semibold text-white bg-[#0a0a0a] hover:-translate-y-1 hover:shadow-lg hover:bg-white-600
+            className="w-full rounded-full p-[14px_20px] font-semibold text-white bg-[#ff6b5a] hover:-translate-y-1 hover:shadow-lg hover:bg-white-600
               active:translate-y-0.5"
           >
             {content === undefined ? "Add" : "Edit"} Content Now
