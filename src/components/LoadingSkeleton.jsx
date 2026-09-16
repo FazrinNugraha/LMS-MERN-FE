@@ -18,7 +18,7 @@ export function CardSkeleton() {
 
 export function StatCardSkeleton() {
   return (
-    <div className="flex flex-col rounded-lg p-4 md:p-5 gap-5 bg-canvas shadow-[0_4px_4px_0_#E0E2EF] animate-pulse">
+    <div className="flex flex-col rounded-lg p-4 md:p-5 gap-5 bg-canvas shadow-[0_4px_4px_0_#ebe6d6] animate-pulse">
       <div className="w-[40px] h-[40px] md:w-[46px] md:h-[46px] rounded-full bg-surface-strong" />
       <div>
         <div className="h-8 bg-surface-strong rounded-lg w-16 mb-2" />

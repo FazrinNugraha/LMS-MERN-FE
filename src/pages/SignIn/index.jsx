@@ -50,7 +50,7 @@ export default function SigninPage({ type = "manager" }) {
     <div className="relative flex flex-col min-h-screen bg-[#fffaf0]">
       {/* Decorative Elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-[#ffb084]/25 rounded-full filter blur-3xl animate-blob"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#b8a4ed]/25 rounded-full filter blur-3xl animate-blob animation-delay-2000"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#ffb084]/25 rounded-full filter blur-3xl animate-blob animation-delay-2000"></div>
 
       <nav className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between p-[20px] md:p-[30px] gap-[20px] md:gap-0">
         <Logo variant="dark" />

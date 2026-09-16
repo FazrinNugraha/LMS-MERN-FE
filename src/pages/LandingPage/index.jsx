@@ -66,7 +66,7 @@ export default function LandingPage() {
 
           {/* Bottom Right - Manager Icon */}
           <div className="absolute top-40 right-[15%] w-14 h-14 md:w-16 md:h-16 rounded-3xl shadow-lg overflow-hidden border-4 border-white animate-float">
-            <div className="w-full h-full bg-gradient-to-br from-[#b8a4ed] to-[#ff4d8b] flex items-center justify-center">
+            <div className="w-full h-full bg-gradient-to-br from-[#ffb084] to-[#ff4d8b] flex items-center justify-center">
               <img
                 src="/assets/images/icons/security-card-white.svg"
                 className="w-7 h-7 md:w-8 md:h-8"

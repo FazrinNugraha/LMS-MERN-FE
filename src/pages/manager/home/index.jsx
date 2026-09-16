@@ -49,7 +49,7 @@ export default function ManagerHomePage() {
             </>
           ) : (
             <>
-              <div className="flex flex-col rounded-[20px] p-4 md:p-5 gap-5 bg-white shadow-[0_4px_4px_0_#E0E2EF] hover:shadow-lg transition-shadow duration-300">
+              <div className="flex flex-col rounded-[20px] p-4 md:p-5 gap-5 bg-white shadow-[0_4px_4px_0_#ebe6d6] hover:shadow-lg transition-shadow duration-300">
                 <img
                   src="/assets/images/icons/profile-2user-purple.svg"
                   className="w-[40px] h-[40px] md:w-[46px] md:h-[46px]"
@@ -64,7 +64,7 @@ export default function ManagerHomePage() {
                   </p>
                 </div>
               </div>
-              <div className="flex flex-col rounded-[20px] p-4 md:p-5 gap-5 bg-white shadow-[0_4px_4px_0_#E0E2EF] hover:shadow-lg transition-shadow duration-300">
+              <div className="flex flex-col rounded-[20px] p-4 md:p-5 gap-5 bg-white shadow-[0_4px_4px_0_#ebe6d6] hover:shadow-lg transition-shadow duration-300">
                 <img
                   src="/assets/images/icons/note-favorite-purple.svg"
                   className="w-[40px] h-[40px] md:w-[46px] md:h-[46px]"
@@ -79,7 +79,7 @@ export default function ManagerHomePage() {
                   </p>
                 </div>
               </div>
-              <div className="flex flex-col rounded-[20px] p-4 md:p-5 gap-5 bg-white shadow-[0_4px_4px_0_#E0E2EF] hover:shadow-lg transition-shadow duration-300">
+              <div className="flex flex-col rounded-[20px] p-4 md:p-5 gap-5 bg-white shadow-[0_4px_4px_0_#ebe6d6] hover:shadow-lg transition-shadow duration-300">
                 <img
                   src="/assets/images/icons/video-play-purple.svg"
                   className="w-[40px] h-[40px] md:w-[46px] md:h-[46px]"
@@ -94,7 +94,7 @@ export default function ManagerHomePage() {
                   </p>
                 </div>
               </div>
-              <div className="flex flex-col rounded-[20px] p-4 md:p-5 gap-5 bg-white shadow-[0_4px_4px_0_#E0E2EF] hover:shadow-lg transition-shadow duration-300">
+              <div className="flex flex-col rounded-[20px] p-4 md:p-5 gap-5 bg-white shadow-[0_4px_4px_0_#ebe6d6] hover:shadow-lg transition-shadow duration-300">
                 <img
                   src="/assets/images/icons/note-purple.svg"
                   className="w-[40px] h-[40px] md:w-[46px] md:h-[46px]"
@@ -112,7 +112,7 @@ export default function ManagerHomePage() {
             </>
           )}
         </div>
-        <div className="flex flex-col flex-1 rounded-[20px] p-4 md:p-5 gap-5 bg-white shadow-[0_4px_4px_0_#E0E2EF]">
+        <div className="flex flex-col flex-1 rounded-[20px] p-4 md:p-5 gap-5 bg-white shadow-[0_4px_4px_0_#ebe6d6]">
           <div className="relative flex items-center justify-center shrink-0 m-auto rounded-full w-[180px] h-[180px] md:w-[230px] md:h-[230px]">
             <div
               className="absolute rounded-full w-[180px] h-[180px] md:w-[230px] md:h-[230px] z-10"
