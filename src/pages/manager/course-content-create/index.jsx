@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import ReactQuill from "react-quill-new";
 import "react-quill-new/dist/quill.snow.css";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { mutateContentSchema } from "../../../utils/zodSchema";
 import { useMutation } from "@tanstack/react-query";
-import { data } from "autoprefixer";
 import { createContent, updateContent } from "../../../services/getCourses";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
@@ -18,8 +17,6 @@ export default function ManageContentCreatePage() {
   const navigate = useNavigate();
 
   const content = useLoaderData();
-
-  console.log("content", content);
 
   const {
     register,
@@ -40,16 +37,10 @@ export default function ManageContentCreatePage() {
 
   const mutateCreateContent = useMutation({
     mutationFn: (data) => createContent(data),
-    onSuccess: (data) => {
-      console.log("success create content", data);
-    }
   })
 
   const mutateUpdateContent = useMutation({
     mutationFn: (data) => updateContent(data, contentId),
-    onSuccess: (data) => {
-      console.log("success update content", data);
-    }
   })
 
 
@@ -73,7 +64,7 @@ export default function ManageContentCreatePage() {
 
       navigate(`/manager/courses/${id}`)
     } catch (error) {
-      console.log("error create content", error);
+      console.error("error create content", error);
 
     }
   };

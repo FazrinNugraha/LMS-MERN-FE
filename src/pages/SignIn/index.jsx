@@ -42,7 +42,7 @@ export default function SigninPage({ type = "manager" }) {
       }
     } catch (error) {
       toast.error(error?.response?.data?.message || "Failed to sign in. Please check your credentials.", { id: loadingToast });
-      console.log(error);
+      console.error(error);
     }
   };
 

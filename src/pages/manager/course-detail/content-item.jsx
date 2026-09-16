@@ -21,7 +21,7 @@ export default function ContentItem({ id, index, type, title, coursesId }) {
 
 
     } catch (error) {
-      console.log("error delete content", error);
+      console.error("error delete content", error);
     }
   }
   return (

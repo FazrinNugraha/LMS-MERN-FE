@@ -2,13 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { useMutation } from "@tanstack/react-query";
-import { deleteStudent } from "../../../services/studentsService";
 import { deleteStudentsByCourseId } from "../../../services/getCourses";
-import { toast } from "react-toastify";
 import { useRevalidator } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
-export default function StudentsItem({ imageUrl, name, TotalCourse, id }) {
+export default function StudentsItem({ imageUrl, name, id }) {
 
   const revalidator = useRevalidator();
 
@@ -61,6 +59,5 @@ export default function StudentsItem({ imageUrl, name, TotalCourse, id }) {
 StudentsItem.propTypes = {
   imageUrl: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  TotalCourse: PropTypes.number.isRequired,
   id: PropTypes.number.isRequired,
 };

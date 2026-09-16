@@ -100,8 +100,6 @@ const router = createBrowserRouter([
         loader: async () => {
           const data = await getCourses()
 
-          console.log(data);
-
           return data
         },
         element: <ManageCoursePage />
@@ -121,7 +119,6 @@ const router = createBrowserRouter([
           const categories = await getCategories()
           const course = await getCourseById(params.id)
 
-          console.log("course detail loader:", course);
           return { categories, course: course?.data }
         },
         element: <ManageCreateCoursePage />

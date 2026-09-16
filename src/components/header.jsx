@@ -15,7 +15,7 @@ export default function Header({type = "manager"}) {
     window.location.replace(`/${type}/sign-in`);
   };
 
-  const handleComingSoon = (e, featureName) => {
+  const handleComingSoon = (e) => {
     e.preventDefault();
     toast('🚧 Fitur sedang dikembangkan oleh developer', {
       duration: 3000,
@@ -109,13 +109,13 @@ export default function Header({type = "manager"}) {
             >
               <ul className="flex flex-col w-[180px] md:w-[200px] rounded-lg border border-hairline p-4 md:p-5 gap-4 bg-canvas shadow-xl">
                 <li className="font-semibold text-sm md:text-base hover:text-primary transition-colors duration-300">
-                  <a href="#" onClick={(e) => handleComingSoon(e, 'My Account')}>My Account</a>
+                  <a href="#" onClick={(e) => handleComingSoon(e)}>My Account</a>
                 </li>
                 <li className="font-semibold text-sm md:text-base hover:text-primary transition-colors duration-300">
-                  <a href="#" onClick={(e) => handleComingSoon(e, 'Subscriptions')}>Subscriptions</a>
+                  <a href="#" onClick={(e) => handleComingSoon(e)}>Subscriptions</a>
                 </li>
                 <li className="font-semibold text-sm md:text-base hover:text-primary transition-colors duration-300">
-                  <a href="#" onClick={(e) => handleComingSoon(e, 'Settings')}>Settings</a>
+                  <a href="#" onClick={(e) => handleComingSoon(e)}>Settings</a>
                 </li>
                 <li className="font-semibold text-sm md:text-base text-error transition-colors duration-300">
                   <button onClick={handleLogout} type="button" className="w-full text-left">

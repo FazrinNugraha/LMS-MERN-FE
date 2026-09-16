@@ -7,7 +7,6 @@ export default function StudentCourseList() {
   const { id } = useParams();
 
   const course = useLoaderData();
-  console.log("courses", course);
   
   return (
     <>

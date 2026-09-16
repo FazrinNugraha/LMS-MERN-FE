@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 export default function TableContent({ details, courseId }) {
-  console.log("details content:", details);
   return (
     <section
       id="CourseList"

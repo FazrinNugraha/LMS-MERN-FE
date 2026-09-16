@@ -10,7 +10,7 @@ export default function Sidebar({ isAdmin = true }) {
   const toggleSidebar = () => setIsOpen(!isOpen);
   const closeSidebar = () => setIsOpen(false);
 
-  const handleComingSoon = (e, featureName) => {
+  const handleComingSoon = (e) => {
     e.preventDefault();
     toast('🚧 Fitur sedang dikembangkan oleh developer', {
       duration: 3000,
@@ -115,7 +115,7 @@ export default function Sidebar({ isAdmin = true }) {
             <p className="font-semibold text-xs leading-[18px] text-muted uppercase tracking-[1.5px]">OTHERS
             </p>
             <li>
-              <Link to="#" onClick={(e) => handleComingSoon(e, 'Subscription')}>
+              <Link to="#" onClick={(e) => handleComingSoon(e)}>
                 <div className="flex items-center gap-3 w-full rounded-md border p-[12px_16px] md:p-[14px_20px] transition-colors duration-300 hover:bg-primary hover:border-primary bg-canvas border-hairline group">
                   <img
                     src="/assets/images/icons/security-card-white.svg"
@@ -129,7 +129,7 @@ export default function Sidebar({ isAdmin = true }) {
               </Link>
             </li>
             <li>
-              <Link to="#" onClick={(e) => handleComingSoon(e, 'Rewards')}>
+              <Link to="#" onClick={(e) => handleComingSoon(e)}>
                 <div className="flex items-center gap-3 w-full rounded-md border p-[12px_16px] md:p-[14px_20px] transition-colors duration-300 hover:bg-primary hover:border-primary bg-canvas border-hairline group">
                   <img
                     src="/assets/images/icons/cup-white.svg"
@@ -143,7 +143,7 @@ export default function Sidebar({ isAdmin = true }) {
               </Link>
             </li>
             <li>
-              <Link to="#" onClick={(e) => handleComingSoon(e, 'Settings')}>
+              <Link to="#" onClick={(e) => handleComingSoon(e)}>
                 <div className="flex items-center gap-3 w-full rounded-md border p-[12px_16px] md:p-[14px_20px] transition-colors duration-300 hover:bg-primary hover:border-primary bg-canvas border-hairline group">
                   <img
                     src="/assets/images/icons/setting-2-white.svg"

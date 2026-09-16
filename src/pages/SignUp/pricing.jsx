@@ -33,7 +33,7 @@ export default function Pricing({data}) {
                 "Gagal mendaftar. Silakan coba lagi."
 
             toast.error(message, { id: loadingToast })
-            console.log(error)
+            console.error(error)
         }
     }
 

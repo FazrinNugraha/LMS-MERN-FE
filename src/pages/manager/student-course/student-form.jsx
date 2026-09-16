@@ -33,8 +33,6 @@ export default function ManageCreateCoursePage() {
 
 
   const onSubmit = async (values) => {
-    console.log(values);
-
     try {
       await mutateAsync(values);
       navigate(`/manager/courses/students/${id}`);

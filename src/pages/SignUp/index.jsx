@@ -17,7 +17,6 @@ export default function SignUpPage() {
     mode: "onChange"
   })
   const onSubmit = (data) => {
-    console.log(data);
     setDataSignUp(data)
     setMode("PRICING")
   };
